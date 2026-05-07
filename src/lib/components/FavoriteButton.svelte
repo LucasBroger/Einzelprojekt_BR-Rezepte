@@ -3,7 +3,7 @@
 
   let { recipeId, initialFavorite = false, large = false } = $props();
 
-  let isFavorite = $state(!!initialFavorite);
+  let isFavorite = $state(Boolean(initialFavorite));
   let loading = $state(false);
 
   async function toggleFavorite() {
@@ -23,8 +23,7 @@
       if (res.status === 401) {
         openLoginPrompt({
           title: 'Login erforderlich',
-          message:
-            'Bitte melde dich an, um dieses Rezept zu deinen Favoriten hinzuzufügen.'
+          message: 'Bitte melde dich an, um dieses Rezept zu deinen Favoriten hinzuzufügen.'
         });
         return;
       }

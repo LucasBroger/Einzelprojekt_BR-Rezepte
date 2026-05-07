@@ -1,11 +1,11 @@
 <script>
   import '../app.css';
-  import { page } from '$app/stores';
+  import { page } from '$app/state';
   import favicon from '$lib/assets/favicon.svg';
-  import { loginPrompt, closeLoginPrompt } from '$lib/stores/ui';
+  import { loginPrompt } from '$lib/stores/ui';
   import LoginPrompt from '$lib/components/LoginPrompt.svelte';
 
-  let { data } = $props();
+  let { data, children } = $props();
 </script>
 
 <svelte:head>
@@ -35,42 +35,27 @@
         {/if}
 
         <nav class="site-nav" aria-label="Hauptnavigation">
-          <a href="/" class:active={$page.url.pathname === '/'}>Startseite</a>
+          <a href="/" class:active={page.url.pathname === '/'}>Startseite</a>
 
-          <a
-            href="/rezepte"
-            class:active={$page.url.pathname.startsWith('/rezepte')}
-          >
+          <a href="/rezepte" class:active={page.url.pathname.startsWith('/rezepte')}>
             Rezepte
           </a>
 
-          <a
-            href="/vorschlag"
-            class:active={$page.url.pathname.startsWith('/vorschlag')}
-          >
+          <a href="/vorschlag" class:active={page.url.pathname.startsWith('/vorschlag')}>
             Vorschlag
           </a>
 
           {#if data.user}
-            <a
-              href="/favorites"
-              class:active={$page.url.pathname === '/favorites'}
-            >
+            <a href="/favorites" class:active={page.url.pathname === '/favorites'}>
               Favoriten
             </a>
             <a href="/auth/logout">Logout</a>
           {:else}
-            <a
-              href="/auth/login"
-              class:active={$page.url.pathname.startsWith('/auth/login')}
-            >
+            <a href="/auth/login" class:active={page.url.pathname.startsWith('/auth/login')}>
               Login
             </a>
 
-            <a
-              href="/auth/register"
-              class:active={$page.url.pathname.startsWith('/auth/register')}
-            >
+            <a href="/auth/register" class:active={page.url.pathname.startsWith('/auth/register')}>
               Registrieren
             </a>
           {/if}
@@ -81,21 +66,19 @@
 
   <main id="main-content" class="page-main">
     <div class="container">
-      <slot />
+      {@render children?.()}
     </div>
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <p>
-        © BR Rezepte — Dein brasilianisches Kochbuch mit Geschmack und Stil.
-      </p>
+      <p>© BR Rezepte — Dein brasilianisches Kochbuch mit Geschmack und Stil.</p>
     </div>
   </footer>
 
-<LoginPrompt
-  open={$loginPrompt.open}
-  title={$loginPrompt.title}
-  message={$loginPrompt.message}
-  onClose={closeLoginPrompt}
-/></div>
+  <LoginPrompt
+    open={$loginPrompt.open}
+    title={$loginPrompt.title}
+    message={$loginPrompt.message}
+  />
+</div>
