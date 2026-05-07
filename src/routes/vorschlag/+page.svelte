@@ -81,7 +81,7 @@
             <option value="">Bitte wählen</option>
             <option value="leicht" selected={form?.values?.aufwand === 'leicht'}>leicht</option>
             <option value="mittel" selected={form?.values?.aufwand === 'mittel'}>mittel</option>
-            <option value="schwer" selected={form?.values?.aufwand === 'schwer'}>schwer</option>
+            <option value="aufwendig" selected={form?.values?.aufwand === 'aufwendig'}>aufwendig</option>
           </select>
           {#if form?.errors?.aufwand}
             <small class="error-text">{form.errors.aufwand}</small>
@@ -90,12 +90,12 @@
 
         <label class="field">
           <span>Zeitaufwand</span>
-          <input
-            name="zeitaufwand"
-            type="text"
-            value={form?.values?.zeitaufwand ?? ''}
-            placeholder="z. B. 45 Minuten"
-          />
+          <select name="zeitaufwand">
+            <option value="">Bitte wählen</option>
+            <option value="kurz" selected={form?.values?.zeitaufwand === 'kurz'}>kurz</option>
+            <option value="mittel" selected={form?.values?.zeitaufwand === 'mittel'}>mittel</option>
+            <option value="lang" selected={form?.values?.zeitaufwand === 'lang'}>lang</option>
+          </select>
           {#if form?.errors?.zeitaufwand}
             <small class="error-text">{form.errors.zeitaufwand}</small>
           {/if}

@@ -33,7 +33,7 @@ export const actions = {
     if (!name) errors.name = 'Bitte gib einen Rezeptnamen ein.';
     if (!menueart) errors.menueart = 'Bitte wähle eine Menüart aus.';
     if (!aufwand) errors.aufwand = 'Bitte wähle einen Aufwand aus.';
-    if (!zeitaufwand) errors.zeitaufwand = 'Bitte gib einen Zeitaufwand an.';
+    if (!zeitaufwand) errors.zeitaufwand = 'Bitte wähle einen Zeitaufwand aus.';
     if (!zutatenText) errors.zutaten = 'Bitte gib mindestens eine Zutat ein.';
     if (!beschreibung) errors.beschreibung = 'Bitte beschreibe das Rezept kurz.';
 
