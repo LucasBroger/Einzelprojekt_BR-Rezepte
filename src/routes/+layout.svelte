@@ -2,7 +2,7 @@
   import '../app.css';
   import { page } from '$app/state';
   import favicon from '$lib/assets/favicon.svg';
-  import { loginPrompt } from '$lib/stores/ui';
+  import { loginPrompt, closeLoginPrompt } from '$lib/stores/ui';
   import LoginPrompt from '$lib/components/LoginPrompt.svelte';
 
   let { data, children } = $props();
@@ -66,7 +66,7 @@
 
   <main id="main-content" class="page-main">
     <div class="container">
-      {@render children?.()}
+      {@render children()}
     </div>
   </main>
 
@@ -80,5 +80,6 @@
     open={$loginPrompt.open}
     title={$loginPrompt.title}
     message={$loginPrompt.message}
+    onClose={closeLoginPrompt}
   />
 </div>

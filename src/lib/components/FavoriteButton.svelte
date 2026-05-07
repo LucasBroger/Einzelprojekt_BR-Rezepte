@@ -23,7 +23,8 @@
       if (res.status === 401) {
         openLoginPrompt({
           title: 'Login erforderlich',
-          message: 'Bitte melde dich an, um dieses Rezept zu deinen Favoriten hinzuzufügen.'
+          message:
+            'Bitte melde dich an, um dieses Rezept zu deinen Favoriten hinzuzufügen.'
         });
         return;
       }
