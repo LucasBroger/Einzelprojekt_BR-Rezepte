@@ -4,7 +4,7 @@
   let { recipe, initialFavorite = false } = $props();
 
   const bildPfad = $derived(
-    recipe.bild ? `/images/${recipe.bild}` : '/default-recipe.svg'
+    recipe?.bild ? `/images/${recipe.bild}` : '/default-recipe.svg'
   );
 </script>
 

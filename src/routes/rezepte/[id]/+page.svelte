@@ -7,7 +7,7 @@
   let personen = $state(data.rezept.portionen || 2);
 
   const bildPfad = $derived(
-    rezept.bild ? `/images/${rezept.bild}` : '/default-recipe.svg'
+    rezept?.bild ? `/images/${rezept.bild}` : '/default-recipe.svg'
   );
 
   function normalizeNumber(value) {
@@ -56,7 +56,12 @@
 <section class="recipe-detail">
   <div class="recipe-hero">
     <div class="recipe-image-wrap">
-      <img class="recipe-image" src={bildPfad} alt={rezept.name} loading="lazy" />
+      <img
+        class="recipe-image"
+        src={bildPfad}
+        alt={rezept.name}
+        loading="lazy"
+      />
     </div>
 
     <div class="recipe-summary panel">
@@ -65,6 +70,10 @@
 
       {#if rezept.name_portugiesisch}
         <p class="recipe-portuguese">{rezept.name_portugiesisch}</p>
+      {/if}
+
+      {#if rezept.beschreibung}
+        <p class="recipe-description">{rezept.beschreibung}</p>
       {/if}
 
       <FavoriteButton
@@ -78,18 +87,22 @@
           <span>Menüart</span>
           <strong>{rezept.menueart || 'Keine Angabe'}</strong>
         </div>
+
         <div class="fact-card">
           <span>Typ</span>
           <strong>{rezept.typ || 'Keine Angabe'}</strong>
         </div>
+
         <div class="fact-card">
           <span>Aufwand</span>
           <strong>{rezept.aufwand || 'Keine Angabe'}</strong>
         </div>
+
         <div class="fact-card">
           <span>Zeitaufwand</span>
           <strong>{rezept.zeitaufwand || 'Keine Angabe'}</strong>
         </div>
+
         <div class="fact-card">
           <span>Portionen</span>
           <strong>{rezept.portionen || 2}</strong>
