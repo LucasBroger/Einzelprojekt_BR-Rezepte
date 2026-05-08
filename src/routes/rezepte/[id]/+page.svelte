@@ -35,7 +35,10 @@
         return `${scaledMenge} ${zutat.einheit || ''} ${zutat.name || ''}`.trim();
       }
 
-      return [zutat.menge, zutat.einheit, zutat.name].filter(Boolean).join(' ').trim() || 'Zutat';
+      return [zutat.menge, zutat.einheit, zutat.name]
+        .filter(Boolean)
+        .join(' ')
+        .trim() || 'Zutat';
     }
 
     return String(zutat);
@@ -125,7 +128,7 @@
 
       {#if rezept.zutaten?.length}
         <ul class="ingredients-list">
-          {#each rezept.zutaten as zutatat}
+          {#each rezept.zutaten as zutat}
             <li>{formatZutat(zutat)}</li>
           {/each}
         </ul>
@@ -156,7 +159,7 @@
       </div>
 
       <ul class="tips-list">
-        {#each rezept.tipps as tipipp}
+        {#each rezept.tipps as tipp}
           <li>{tipp}</li>
         {/each}
       </ul>
