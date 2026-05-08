@@ -6,6 +6,10 @@
   const rezept = $derived(data.rezept);
   let personen = $state(data.rezept.portionen || 2);
 
+  const bildPfad = $derived(
+    rezept.bild ? `/images/${rezept.bild}` : '/default-recipe.svg'
+  );
+
   function normalizeNumber(value) {
     const num = Number(value);
     return Number.isFinite(num) ? num : null;
@@ -52,7 +56,7 @@
 <section class="recipe-detail">
   <div class="recipe-hero">
     <div class="recipe-image-wrap">
-      <img class="recipe-image" src={rezept.bild} alt={rezept.name} loading="lazy" />
+      <img class="recipe-image" src={bildPfad} alt={rezept.name} loading="lazy" />
     </div>
 
     <div class="recipe-summary panel">
@@ -61,10 +65,6 @@
 
       {#if rezept.name_portugiesisch}
         <p class="recipe-portuguese">{rezept.name_portugiesisch}</p>
-      {/if}
-
-      {#if rezept.beschreibung}
-        <p class="recipe-description">{rezept.beschreibung}</p>
       {/if}
 
       <FavoriteButton
@@ -91,8 +91,8 @@
           <strong>{rezept.zeitaufwand || 'Keine Angabe'}</strong>
         </div>
         <div class="fact-card">
-          <span>Aufrufe</span>
-          <strong>{rezept.views || 0}</strong>
+          <span>Portionen</span>
+          <strong>{rezept.portionen || 2}</strong>
         </div>
       </div>
     </div>
@@ -112,8 +112,8 @@
 
       {#if rezept.zutaten?.length}
         <ul class="ingredients-list">
-          {#each rezept.zutaten as zutat}
-            <li>{formatZutat(zutat)}</li>
+          {#each rezept.zutaten as zutatat}
+            >{formatZutat(zutat)}</li>
           {/each}
         </ul>
       {:else}
@@ -126,12 +126,8 @@
         <h2>Zubereitung</h2>
       </div>
 
-      {#if rezept.zubereitungsschritte?.length}
-        <ol class="steps-list">
-          {#each rezept.zubereitungsschritte as schritt}
-            <li>{schritt}</li>
-          {/each}
-        </ol>
+      {#if rezept.zubereitung}
+        <p class="recipe-description">{rezept.zubereitung}</p>
       {:else}
         <p class="empty-inline">
           Für dieses Rezept sind noch keine Zubereitungsschritte vorhanden.
@@ -147,8 +143,8 @@
       </div>
 
       <ul class="tips-list">
-        {#each rezept.tipps as tipp}
-          <li>{tipp}</li>
+        {#each rezept.tipps as tipipp}
+          >{tipp}</li>
         {/each}
       </ul>
     </section>

@@ -2,12 +2,16 @@
   import FavoriteButton from '$lib/components/FavoriteButton.svelte';
 
   let { recipe, initialFavorite = false } = $props();
+
+  const bildPfad = $derived(
+    recipe.bild ? `/images/${recipe.bild}` : '/default-recipe.svg'
+  );
 </script>
 
 <article class="recipe-card">
   <a class="thumb" href={`/rezepte/${recipe._id}`}>
     <img
-      src={recipe.bild || '/default-recipe.svg'}
+      src={bildPfad}
       alt={recipe.name}
       loading="lazy"
     />
