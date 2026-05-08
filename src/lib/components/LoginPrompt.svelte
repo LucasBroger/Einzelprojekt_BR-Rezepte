@@ -1,11 +1,11 @@
 <script>
-  import { goto } from '$app/navigation';
+  import { goto } from "$app/navigation";
 
   let {
     open = false,
-    title = 'Login erforderlich',
-    message = 'Du musst eingeloggt sein.',
-    onClose = () => {}
+    title = "Login erforderlich",
+    message = "Du musst eingeloggt sein.",
+    onClose = () => {},
   } = $props();
 
   function handleBackdropClick(event) {
@@ -15,7 +15,7 @@
   }
 
   function handleKeydown(event) {
-    if (event.key === 'Escape') {
+    if (event.key === "Escape") {
       onClose();
     }
   }
@@ -44,12 +44,12 @@
       <p id="login-prompt-message">{message}</p>
 
       <div class="modal-actions">
-        <button type="button" class="btn btn-primary" onclick={() => goTo('/auth/login')}>
+        <button
+          type="button"
+          class="btn btn-primary"
+          onclick={() => goTo("/auth/login")}
+        >
           Login
-        </button>
-
-        <button type="button" class="btn btn-secondary" onclick={() => goTo('/auth/register')}>
-          Registrieren
         </button>
 
         <button type="button" class="btn btn-secondary" onclick={onClose}>
