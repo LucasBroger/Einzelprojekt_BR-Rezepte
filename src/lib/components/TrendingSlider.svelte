@@ -1,5 +1,5 @@
 <script>
-  import { onMount } from "svelte";
+  import { onMount } from 'svelte';
 
   let { recipes = [] } = $props();
   let current = $state(0);
@@ -12,6 +12,10 @@
   function prev() {
     if (!recipes.length) return;
     current = (current - 1 + recipes.length) % recipes.length;
+  }
+
+  function getBildPfad(recipe) {
+    return recipe?.bild ? `/images/${recipe.bild}` : '/default-recipe.svg';
   }
 
   onMount(() => {
@@ -41,10 +45,10 @@
           href={`/rezepte/${recipe._id}`}
           class:active={index === current}
           class="slide"
-          aria-hidden={index === current ? "false" : "true"}
+          aria-hidden={index === current ? 'false' : 'true'}
         >
           <img
-            src={recipe.bild || "/default-recipe.svg"}
+            src={getBildPfad(recipe)}
             alt={recipe.name}
             loading="lazy"
           />
@@ -52,9 +56,11 @@
           <div class="slide-overlay">
             <span class="slide-badge">Top Rezept</span>
             <h3>{recipe.name}</h3>
+
             {#if recipe.name_portugiesisch}
               <p class="slide-sub">{recipe.name_portugiesisch}</p>
             {/if}
+
             <p class="slide-meta">
               {recipe.menueart} • {recipe.aufwand} • {recipe.zeitaufwand}
               {#if recipe.views !== undefined}

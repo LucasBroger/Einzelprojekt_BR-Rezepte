@@ -126,7 +126,7 @@
       {#if rezept.zutaten?.length}
         <ul class="ingredients-list">
           {#each rezept.zutaten as zutatat}
-            >{formatZutat(zutat)}</li>
+            <li>{formatZutat(zutat)}</li>
           {/each}
         </ul>
       {:else}
@@ -157,7 +157,7 @@
 
       <ul class="tips-list">
         {#each rezept.tipps as tipipp}
-          >{tipp}</li>
+          <li>{tipp}</li>
         {/each}
       </ul>
     </section>
