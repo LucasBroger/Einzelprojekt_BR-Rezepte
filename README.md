@@ -219,7 +219,7 @@ Die folgende Deklaration ist verpflichtend und beschreibt den Einsatz von KI im 
 ### 6.1 KI-Tools
 
 - **Eingesetzte Tools:**  
-  ChatGPT bzw. ein KI-Assistent zur Unterstützung bei Fehlersuche, Refactoring, Textentwürfen und Strukturierung der Dokumentation.
+  Perplexity, ein KI-Assistent, wurde zur Unterstützung bei Fehlersuche, Refactoring, Textentwürfen und Strukturierung der Dokumentation. Das Grundgerüst wurde mittels Masterprompt mit GitHub Copilot erstellt.
 - **Zweck & Umfang:**  
   KI wurde verwendet, um Build-Fehler zu analysieren, SvelteKit- und MongoDB-Logik zu bereinigen, Codebeispiele zu korrigieren und die Projektdokumentation sprachlich zu verbessern. Die eigentliche Umsetzung, Anpassung und finale Entscheidung lagen bei mir.
 - **Eigene Leistung (Abgrenzung):**  
