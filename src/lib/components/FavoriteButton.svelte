@@ -1,7 +1,7 @@
 <script>
   import { openLoginPrompt } from '$lib/stores/ui';
 
-  let { recipeId, initialFavorite = false, large = false } = $props();
+  let { recipeId, initialFavorite = false, portionen = 2, large = false } = $props();
 
   let isFavorite = $state(Boolean(initialFavorite));
   let loading = $state(false);
@@ -17,7 +17,7 @@
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ recipeId })
+        body: JSON.stringify({ recipeId, portionen })
       });
 
       if (res.status === 401) {

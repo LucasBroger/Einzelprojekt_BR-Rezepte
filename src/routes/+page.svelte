@@ -57,22 +57,3 @@
     </article>
   </div>
 </section>
-
-<section class="section-block">
-  <div class="page-intro">
-    <h2>Weitere Rezepte</h2>
-    <p>Ein erster Einblick in deine brasilianische Rezeptsammlung.</p>
-  </div>
-
-  {#if data.featured?.length}
-    <div class="card-grid">
-      {#each data.featured as recipe}
-        <RecipeCard {recipe} initialFavorite={false} />
-      {/each}
-    </div>
-  {:else}
-    <div class="empty-state">
-      <p>Momentan konnten keine Rezepte geladen werden.</p>
-    </div>
-  {/if}
-</section>

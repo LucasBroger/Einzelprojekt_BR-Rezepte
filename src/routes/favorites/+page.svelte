@@ -24,9 +24,11 @@
   </div>
 
   {#if data.rezepte?.length}
-    <div class="card-grid">
+    <div class="favorites-grid">
       {#each data.rezepte as r}
-        <RecipeCard recipe={r} initialFavorite={true} />
+        <div class="favorites-grid-item">
+          <RecipeCard recipe={r} initialFavorite={true} />
+        </div>
       {/each}
     </div>
   {:else}

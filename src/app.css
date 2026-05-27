@@ -18,9 +18,12 @@
   --max-width: 1180px;
 }
 
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -31,11 +34,26 @@ html, body {
   color: var(--text);
 }
 
-body { min-height: 100vh; }
+body {
+  min-height: 100vh;
+}
 
-a { color: inherit; text-decoration: none; }
-img { display: block; max-width: 100%; }
-button, input, select, textarea { font: inherit; }
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
 
 .container {
   width: min(var(--max-width), calc(100% - 2rem));
@@ -68,6 +86,21 @@ button, input, select, textarea { font: inherit; }
 }
 
 .brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.9rem;
+  color: inherit;
+  text-decoration: none;
+}
+
+.brand-logo {
+  width: 58px;
+  height: 58px;
+  flex-shrink: 0;
+  display: block;
+}
+
+.brand-copy {
   display: flex;
   flex-direction: column;
   gap: 0.15rem;
@@ -77,11 +110,13 @@ button, input, select, textarea { font: inherit; }
   font-size: 1.1rem;
   font-weight: 800;
   letter-spacing: 0.02em;
+  line-height: 1.1;
 }
 
 .brand-subtitle {
   font-size: 0.82rem;
   color: var(--muted);
+  line-height: 1.1;
 }
 
 .nav-side {
@@ -153,7 +188,8 @@ button, input, select, textarea { font: inherit; }
   box-shadow: var(--shadow);
 }
 
-.hero-panel h1, .hero-panel h2 {
+.hero-panel h1,
+.hero-panel h2 {
   margin: 0 0 0.75rem;
   line-height: 1.1;
 }
@@ -197,7 +233,9 @@ button, input, select, textarea { font: inherit; }
   transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease, color 0.18s ease;
 }
 
-.btn:hover { transform: translateY(-1px); }
+.btn:hover {
+  transform: translateY(-1px);
+}
 
 .btn-primary {
   background: var(--accent);
@@ -205,7 +243,9 @@ button, input, select, textarea { font: inherit; }
   box-shadow: 0 10px 20px rgba(244, 180, 0, 0.22);
 }
 
-.btn-primary:hover { background: #ffcb2f; }
+.btn-primary:hover {
+  background: #ffcb2f;
+}
 
 .btn-secondary {
   background: white;
@@ -213,7 +253,9 @@ button, input, select, textarea { font: inherit; }
   border: 1px solid var(--border);
 }
 
-.section-block { margin-top: 1.5rem; }
+.section-block {
+  margin-top: 1.5rem;
+}
 
 .card-grid {
   display: grid;
@@ -229,10 +271,20 @@ button, input, select, textarea { font: inherit; }
   box-shadow: var(--shadow);
 }
 
-.page-intro { margin-bottom: 1.25rem; }
+.page-intro {
+  margin-bottom: 1.25rem;
+}
 
-.page-intro h1, .page-intro h2, .page-intro h3 { margin: 0 0 0.4rem; }
-.page-intro p { margin: 0; color: var(--muted); }
+.page-intro h1,
+.page-intro h2,
+.page-intro h3 {
+  margin: 0 0 0.4rem;
+}
+
+.page-intro p {
+  margin: 0;
+  color: var(--muted);
+}
 
 .recipe-card {
   display: flex;
@@ -250,7 +302,9 @@ button, input, select, textarea { font: inherit; }
   box-shadow: 0 18px 35px rgba(31, 42, 31, 0.12);
 }
 
-.thumb-wrap { position: relative; }
+.thumb-wrap {
+  position: relative;
+}
 
 .recipe-card .thumb {
   display: block;
@@ -266,7 +320,9 @@ button, input, select, textarea { font: inherit; }
   transition: transform 0.35s ease;
 }
 
-.recipe-card:hover .thumb img { transform: scale(1.04); }
+.recipe-card:hover .thumb img {
+  transform: scale(1.04);
+}
 
 .card-favorite {
   position: absolute;
@@ -286,7 +342,9 @@ button, input, select, textarea { font: inherit; }
   box-shadow: 0 10px 24px rgba(31, 42, 31, 0.18);
 }
 
-.recipe-card .info { padding: 1rem 1rem 1.15rem; }
+.recipe-card .info {
+  padding: 1rem 1rem 1.15rem;
+}
 
 .recipe-card .title h3 {
   margin: 0;
@@ -428,7 +486,11 @@ button, input, select, textarea { font: inherit; }
   box-shadow: var(--shadow);
 }
 
-.detail-box h2, .detail-box h3, .detail-box h4 { margin-top: 0; }
+.detail-box h2,
+.detail-box h3,
+.detail-box h4 {
+  margin-top: 0;
+}
 
 .section-heading {
   display: flex;
@@ -438,7 +500,9 @@ button, input, select, textarea { font: inherit; }
   margin-bottom: 1rem;
 }
 
-.section-heading h2 { margin: 0; }
+.section-heading h2 {
+  margin: 0;
+}
 
 .person-input,
 .portion-control {
@@ -486,8 +550,14 @@ button, input, select, textarea { font: inherit; }
   color: var(--text);
 }
 
-.prose { line-height: 1.7; }
-.prose p, .prose li { color: var(--text); }
+.prose {
+  line-height: 1.7;
+}
+
+.prose p,
+.prose li {
+  color: var(--text);
+}
 
 .empty-state,
 .empty-inline {
@@ -759,8 +829,13 @@ button, input, select, textarea { font: inherit; }
   z-index: 2;
 }
 
-.slider-btn.prev { left: 1rem; }
-.slider-btn.next { right: 1rem; }
+.slider-btn.prev {
+  left: 1rem;
+}
+
+.slider-btn.next {
+  right: 1rem;
+}
 
 .slider-dots {
   position: absolute;
@@ -781,7 +856,9 @@ button, input, select, textarea { font: inherit; }
   cursor: pointer;
 }
 
-.slider-dots button.active { background: white; }
+.slider-dots button.active {
+  background: white;
+}
 
 .skip-link {
   position: absolute;
@@ -796,11 +873,17 @@ button, input, select, textarea { font: inherit; }
   transition: top 0.2s ease;
 }
 
-.skip-link:focus { top: 1rem; }
+.skip-link:focus {
+  top: 1rem;
+}
 
-.form-panel { max-width: 860px; margin: 0 auto; }
+.form-panel {
+  max-width: 860px;
+  margin: 0 auto;
+}
 
 @media (max-width: 900px) {
+
   .detail-hero,
   .recipe-hero,
   .detail-sections,
@@ -832,7 +915,9 @@ button, input, select, textarea { font: inherit; }
     align-items: stretch;
   }
 
-  .user-badge { text-align: center; }
+  .user-badge {
+    text-align: center;
+  }
 
   .site-nav {
     width: 100%;
@@ -858,18 +943,97 @@ button, input, select, textarea { font: inherit; }
     height: 320px;
   }
 
-  .slide-overlay { padding: 1rem; }
-  .slider-btn { width: 40px; height: 40px; }
+  .slide-overlay {
+    padding: 1rem;
+  }
+
+  .slider-btn {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.alert-error {
+  margin-bottom: 1rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid #d9a3a3;
+  border-radius: 0.75rem;
+  background: #fff1f1;
+  color: #8a1f1f;
+}
+
+.field-readonly .readonly-value {
+  display: flex;
+  align-items: center;
+  min-height: 3rem;
+  padding: 0.85rem 1rem;
+  border: 1px solid #d8d8d8;
+  border-radius: 0.75rem;
+  background: #f6f6f6;
+  color: #444;
+  font-weight: 600;
+}
+
+.field input[aria-invalid='true'],
+.field select[aria-invalid='true'],
+.field textarea[aria-invalid='true'] {
+  border-color: #c0392b;
+  background: #fff8f7;
+}
+
+.field input[aria-invalid='true']:focus,
+.field select[aria-invalid='true']:focus,
+.field textarea[aria-invalid='true']:focus {
+  outline: 2px solid #c0392b;
+  outline-offset: 2px;
+}
+
+.error-text {
+  display: block;
+  margin-top: 0.35rem;
+  color: #b42318;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.success-dialog {
+  border: none;
+  border-radius: 1rem;
+  padding: 0;
+  max-width: 28rem;
+  width: calc(100% - 2rem);
+}
+
+.success-dialog::backdrop {
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.success-dialog-content {
+  padding: 1.5rem;
+  background: #ffffff;
+  border-radius: 1rem;
+}
+
+.success-dialog-content h2 {
+  margin-bottom: 0.75rem;
+}
+
+.success-dialog-content p {
+  margin-bottom: 1.25rem;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
+
+  *,
+  *::before,
+  *::after {
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
   }
 }
+
 .recipe-card {
   display: flex;
   flex-direction: column;
@@ -974,6 +1138,7 @@ button, input, select, textarea { font: inherit; }
 .favorite-text {
   line-height: 1;
 }
+
 .login-prompt {
   max-width: 520px;
 }
@@ -984,4 +1149,40 @@ button, input, select, textarea { font: inherit; }
 
 .login-prompt .btn {
   min-width: 130px;
+}
+
+.favorites-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+.favorites-grid-item {
+  display: flex;
+  height: 100%;
+}
+
+.favorites-grid-item .recipe-card {
+  width: 100%;
+  height: 100%;
+}
+
+.favorite-portionen {
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #2f6b3a;
+}
+
+@media (min-width: 640px) {
+  .favorites-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .favorites-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }

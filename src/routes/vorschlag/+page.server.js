@@ -7,7 +7,9 @@ export function load({ locals }) {
     throw redirect(303, '/auth/login?redirectTo=/vorschlag');
   }
 
-  return {};
+  return {
+    userName: locals.user.name || locals.user.username || locals.user.email || ''
+  };
 }
 
 /** @type {import('./$types').Actions} */
@@ -26,21 +28,47 @@ export const actions = {
     const zeitaufwand = data.get('zeitaufwand')?.toString().trim() || '';
     const zutatenText = data.get('zutaten')?.toString().trim() || '';
     const beschreibung = data.get('beschreibung')?.toString().trim() || '';
-    const absenderName = data.get('absenderName')?.toString().trim() || '';
+    const absenderName =
+      locals.user.name || locals.user.username || locals.user.email || '';
 
     const errors = {};
+    let firstErrorField = null;
 
-    if (!name) errors.name = 'Bitte gib einen Rezeptnamen ein.';
-    if (!menueart) errors.menueart = 'Bitte wähle eine Menüart aus.';
-    if (!aufwand) errors.aufwand = 'Bitte wähle einen Aufwand aus.';
-    if (!zeitaufwand) errors.zeitaufwand = 'Bitte wähle einen Zeitaufwand aus.';
-    if (!zutatenText) errors.zutaten = 'Bitte gib mindestens eine Zutat ein.';
-    if (!beschreibung) errors.beschreibung = 'Bitte beschreibe das Rezept kurz.';
+    if (!name) {
+      errors.name = 'Bitte gib einen Rezeptnamen ein.';
+      firstErrorField ??= 'name';
+    }
+
+    if (!menueart) {
+      errors.menueart = 'Bitte wähle eine Menüart aus.';
+      firstErrorField ??= 'menueart';
+    }
+
+    if (!aufwand) {
+      errors.aufwand = 'Bitte wähle den Aufwand für das Rezept aus.';
+      firstErrorField ??= 'aufwand';
+    }
+
+    if (!zeitaufwand) {
+      errors.zeitaufwand = 'Bitte wähle den Zeitaufwand für das Rezept aus.';
+      firstErrorField ??= 'zeitaufwand';
+    }
+
+    if (!zutatenText) {
+      errors.zutaten = 'Bitte trage mindestens eine Zutat ein, idealerweise eine pro Zeile.';
+      firstErrorField ??= 'zutaten';
+    }
+
+    if (!beschreibung) {
+      errors.beschreibung = 'Bitte beschreibe kurz, was das Rezept ausmacht oder wie es zubereitet wird.';
+      firstErrorField ??= 'beschreibung';
+    }
 
     if (Object.keys(errors).length > 0) {
       return fail(422, {
         success: false,
         errors,
+        firstErrorField,
         values: {
           name,
           name_portugiesisch,
@@ -48,8 +76,7 @@ export const actions = {
           aufwand,
           zeitaufwand,
           zutaten: zutatenText,
-          beschreibung,
-          absenderName
+          beschreibung
         }
       });
     }
@@ -77,7 +104,16 @@ export const actions = {
 
     return {
       success: true,
-      message: 'Dein Rezeptvorschlag wurde erfolgreich gespeichert.'
+      message: 'Dein Rezeptvorschlag wurde erfolgreich gespeichert.',
+      values: {
+        name: '',
+        name_portugiesisch: '',
+        menueart: '',
+        aufwand: '',
+        zeitaufwand: '',
+        zutaten: '',
+        beschreibung: ''
+      }
     };
   }
 };

@@ -1,7 +1,6 @@
 <script>
   import '../app.css';
   import { page } from '$app/state';
-  import favicon from '$lib/assets/favicon.svg';
   import { loginPrompt, closeLoginPrompt } from '$lib/stores/ui';
   import LoginPrompt from '$lib/components/LoginPrompt.svelte';
 
@@ -9,7 +8,6 @@
 </script>
 
 <svelte:head>
-  <link rel="icon" href={favicon} />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta
     name="description"
@@ -23,8 +21,15 @@
   <header class="site-header">
     <div class="site-header-inner">
       <a href="/" class="brand" aria-label="Zur Startseite">
-        <span class="brand-title">BR Rezepte</span>
-        <span class="brand-subtitle">Brasilianisches Kochbuch</span>
+        <img
+          src="/br-rezepte-logo.svg"
+          alt="BR Rezepte Logo"
+          class="brand-logo"
+        />
+        <div class="brand-copy">
+          <span class="brand-title">BR Rezepte</span>
+          <span class="brand-subtitle">Brasilianisches Kochbuch</span>
+        </div>
       </a>
 
       <div class="nav-side">

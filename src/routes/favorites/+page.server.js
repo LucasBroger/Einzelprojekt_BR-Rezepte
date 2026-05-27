@@ -25,20 +25,39 @@ export async function load({ cookies, url }) {
     return { rezepte: [] };
   }
 
-  const favIds = favRaw.map((id) => {
+  const favoriteMeta = favRaw.map((fav) => {
+    if (typeof fav === 'string') {
+      return {
+        recipeId: String(fav),
+        portionen: null
+      };
+    }
+
+    return {
+      recipeId: String(fav.recipeId),
+      portionen: fav.portionen ?? null
+    };
+  });
+
+  const favIds = favoriteMeta.map((fav) => {
     try {
-      return toObjectId(id);
+      return toObjectId(fav.recipeId);
     } catch {
-      return id;
+      return fav.recipeId;
     }
   });
 
   const rezepteCol = await getCollection('rezepte');
   const items = await rezepteCol.find({ _id: { $in: favIds } }).toArray();
 
+  const metaMap = new Map(
+    favoriteMeta.map((fav) => [String(fav.recipeId), fav.portionen])
+  );
+
   const rezepte = items.map((it) => ({
     ...it,
-    _id: String(it._id)
+    _id: String(it._id),
+    favoritePortionen: metaMap.get(String(it._id)) ?? null
   }));
 
   return { rezepte };

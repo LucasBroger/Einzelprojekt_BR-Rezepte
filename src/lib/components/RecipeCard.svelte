@@ -33,5 +33,11 @@
     <p class="meta">
       {recipe.menueart} • {recipe.aufwand} • {recipe.zeitaufwand}
     </p>
+
+    {#if recipe.favoritePortionen}
+      <p class="favorite-portionen">
+        Gespeichert für {recipe.favoritePortionen} Personen
+      </p>
+    {/if}
   </div>
 </article>

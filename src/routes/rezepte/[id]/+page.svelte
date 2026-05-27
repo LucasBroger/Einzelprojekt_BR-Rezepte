@@ -82,6 +82,7 @@
       <FavoriteButton
         recipeId={rezept._id}
         initialFavorite={data.isFavorite}
+        portionen={personen}
         large={true}
       />
 
@@ -104,11 +105,6 @@
         <div class="fact-card">
           <span>Zeitaufwand</span>
           <strong>{rezept.zeitaufwand || 'Keine Angabe'}</strong>
-        </div>
-
-        <div class="fact-card">
-          <span>Portionen</span>
-          <strong>{rezept.portionen || 2}</strong>
         </div>
       </div>
     </div>

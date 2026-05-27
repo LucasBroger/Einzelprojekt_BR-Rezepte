@@ -130,7 +130,7 @@ Fasst die technische Realisierung zusammen.
 ### 3.5 Validate
 
 **URL der getesteten Version:**  
-  Die getestete Version ist die auf Netlify deployte Live-Version.
+  Die getestete Version ist die auf Netlify deployte Live-Version. Die URL findet man hier: https://6a0d6d371e8c370008c75c29--brasilianischerezepte.netlify.app/
 **Ziele der Prüfung:**  
 Ich habe mir folgende Fragestellungen gestellt, um herauszufinden, ob ich mit meinem Projekt zufrieden bin:
 
@@ -181,14 +181,12 @@ Optimierungspotenzial besteht jedoch noch beim Feinschliff, beispielsweise bei d
 **Abgeleitete Verbesserungen:**  
   Ich werde für die Verbesserungen wie folgt vorgehen:
   - Ein Logo bzw. ein Favicon wird für Hauptseite bzw. für den Browsertab erstellt und wird implementiert.
-  - unten bei Kästli den klick aktivieren sodass es auf die seiten springt
+  - Die Kästchen unten auf der Website mache ich nicht klickbar, weil ich nicht denke, dass das der Sinn davon ist.
   - Die weiteren Rezepte ganz unten auf der Hauptseite werden entfernt, da der nutzen nicht so gross ist und somit die seite ein wenig redundanter wird.
   - Die Geschichte bzw. die region aus der das Rezepte herstammt, wäre ein interessantes Feature, welches aber ausserhalb des im Projektrahmen definierte Zeit gemacht werden muss.
   - Auf dem RecipeCards wird die Anzahl Personen entfernt, da es nur für verwirrung sorgt, da es eine fixe zahl (die standard zahl) ist.
   - Die Darstellung der Rezepte auf der Favoritenseite wird so angepasst, das es besser übersichtlich ist. 
-  - Personen anzahl speichern wenn man zuerst das macht und nacher favorisiert
-
-vorschlag:
+  - Personen anzahl wird bei der speicherung nacher in der favoritenliste sichtbar aber nacher im rezept selber, bleibt es gleich
   - Beim Ausüllen eines Vorschlages wird nicht mehr nach dem Namen gefragt. Es wird von nun an den Namen automatisch aus dem Benutzerkonto nehmen. - Neu wird noch eine bessere Fehlermeldung angezeigt, wenn im Vorschlagsformular etwas falsch ausgefüllt wurde. 
   - Zudem soll es gleich noch die Bestätigung als Pop up machen und nicht wie jetzt ganz oben im Formular wo man nur sieht wenn man nach oben scrollt. 
 
