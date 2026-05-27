@@ -129,36 +129,70 @@ Fasst die technische Realisierung zusammen.
 
 ### 3.5 Validate
 
-- **URL der getesteten Version:**  
+**URL der getesteten Version:**  
   Die getestete Version ist die auf Netlify deployte Live-Version.
-- **Ziele der Prüfung:**  
-  - Funktioniert der Hauptworkflow von der Rezeptübersicht bis zur Detailansicht?
-  - Können Nutzer Rezepte als Favoriten speichern?
-  - Funktioniert das Vorschlagsformular mit Validierung und Speicherung?
-  - Ist die Bedienung verständlich und nachvollziehbar?
-- **Vorgehen:**  
-  Die Validierung wurde über interne Tests und wiederholte Deployment-Prüfungen durchgeführt. Zusätzlich wurde die Anwendung aus Nutzersicht geprüft, um Fehler und Unklarheiten zu erkennen.
-- **Stichprobe:**  
-  Testpersonen waren zuerst ich selbst im Rahmen der Entwicklung sowie einzelne Personen aus dem Umfeld, die die Oberfläche und die Verständlichkeit beurteilen konnten.
-- **Aufgaben/Szenarien:**  
-  - Ein Rezept in der Übersicht finden.
-  - Eine Rezeptdetailseite öffnen.
-  - Einen Favoriten speichern.
-  - Ein Rezept über das Vorschlagsformular erfassen.
-  - Prüfen, ob Fehlermeldungen und Erfolgsmeldungen verständlich sind.
-- **Kennzahlen & Beobachtungen:**  
-  - Hauptworkflow funktionierte nach mehreren Korrekturen stabil.
-  - Build-Fehler und Datenbankprobleme konnten durch Logs und Anpassungen behoben werden.
-  - Das Vorschlagsformular bietet direktes Feedback bei fehlenden Eingaben.
-  - Die Favoritenfunktion ist direkt in die Rezeptansicht integriert und leicht verständlich.
-- **Zusammenfassung der Resultate:**  
-  Die Validierung zeigte, dass die wichtigsten Kernfunktionen funktionieren und die Anwendung für Nutzende verständlich aufgebaut ist. Besonders positiv sind die klare Navigation, die Rezeptdetailseite und das Vorschlagsformular. Optimierungspotenzial besteht bei Feinschliff, Content-Ergänzungen und der Dokumentation der Evaluation.
-- **Abgeleitete Verbesserungen:**  
-  - Formulare weiter vereinheitlichen und fachlich schärfer benennen.
-  - Zusätzliche Rezepte und Inhalte ergänzen.
-  - Dokumentation und Evaluation mit klaren Beispielen ausbauen.
-  - Kleine UI-Verbesserungen und responsive Feinschliffe weiter ausarbeiten.
+**Ziele der Prüfung:**  
+Ich habe mir folgende Fragestellungen gestellt, um herauszufinden, ob ich mit meinem Projekt zufrieden bin:
 
+  - Ist meine Website logisch und simpel aufgebaut?
+  - Kann man Rezepte favorisieren, aber nur mit einem Login?
+  - Kann man Rezeptvorschläge erstellen, aber nur mit einem Login?
+  - Kann man die Mengenangaben innerhalb eines Rezeptes anpassen, sodass die Rezepte für eine bestimmte Anzahl Personen zubereitet werden können?
+  - Ist die Bedienung verständlich und nachvollziehbar?
+**Vorgehen:**  
+  Zuerst habe ich die Deployment-Prüfung selbst durchgeführt, um zu überprüfen, ob alles funktioniert. Danach habe ich drei Testpersonen befragt, welche meine Website entweder mit dem PC oder dem Handy besucht haben. Ich befand mich währenddessen im selben Raum wie die Testpersonen und beobachtete sie, erklärte ihnen jedoch von Anfang an, dass sie sich so verhalten sollen, als wäre ich nicht anwesend.
+
+  Ich habe den Testpersonen ein Testszenario sowie die dazugehörigen Testaufgaben gegeben. Diese wurden in einem Word-Dokument erfasst und den Testpersonen anschliessend übergeben. Während oder nach dem Test wurden unter anderem folgende Fragen gestellt:
+
+  - Was war dein erster Eindruck, als du die Website gesehen hast?
+  - Fandest du die Website simpel und logisch gestaltet?
+  -	Hast du leicht herausgefunden, wie man ein Rezept favorisiert? Hast du Verbesserungsvorschläge?
+  -	Hast du leicht herausgefunden, wie man einen Rezeptvorschlag erstellt? Hast du Verbesserungsvorschläge?
+
+  Zusätzlich wurde die Anwendung am Schluss aus Sicht der Nutzer geprüft, um Fehler und Unklarheiten zu erkennen.
+**Stichprobe:**  
+  Die erste Testperson war ich selbst im Rahmen der Entwicklung. Danach habe ich eine Gruppe von vier Personen aus der Klasse befragt, wobei jedes Mitglied der Gruppe meine Website alleine besucht hat. Somit konnte sichergestellt werden, dass die Testpersonen auf sich selbst angewiesen waren, wie es auch in einem realen Anwendungsfall wäre.
+**Aufgaben/Szenarien:**
+  - *Testszenario:* Du bist ein leidenschaftlicher Hobbykoch und suchst nach Rezepten. Zufälligerweise bist du auf meine Website gestossen und hast Lust bekommen, brasilianische Rezepte selbst zu machen.
+
+  - *Testaufgabe 1:* Dieses Wochenende erhältst du Besuch (4 Personen) und suchst noch nach einem Dessertrezept. Damit du es am Wochenende nachmachen kannst, musst du es noch speichern.
+  
+  - *Testaufgabe 2:* Am Wochenende nach dem Essen hat dir ein Freund gesagt, dass du einmal das Gericht «Bolinhas de Cacau» machen solltest. Du findest dieses Dessert jedoch nicht auf der Website, würdest es aber gerne dort sehen.
+
+  Zudem soll zusätzlich auf Fehler- und Erfolgsmeldungen geachtet werden.
+**Kennzahlen & Beobachtungen:**  
+  Alle Testpersonen hatten einen guten ersten Eindruck der Website. Ihnen gefiel insbesondere die Farbwahl mit den brasilianischen Farben. Ebenfalls positiv bewertet wurden die klare Struktur und der logische Aufbau der Seite. Die Slides mit den meistangeklickten Rezepten kamen ebenfalls gut an. Zudem fanden die Testpersonen es sinnvoll, dass man zuerst ein Login erstellen muss, um die speziellen Funktionen nutzen zu können.
+
+Die Testpersonen fanden sich bei den Aufgaben schnell zurecht. Dabei konnte ich jedoch auch kleinere Punkte erkennen, die verbessert werden könnten. Beispielsweise sollte beim Speichern eines Rezeptes auch die aktuell ausgewählte Anzahl Personen mitgespeichert werden.
+
+Es gab ausserdem einige Verbesserungsvorschläge und Anmerkungen. Die Rezepte ganz unten auf der Hauptseite sollen entfernt werden. Zusätzlich wurde vorgeschlagen, Informationen zur Geschichte sowie zur Herkunft oder Region eines Gerichtes anzuzeigen. Dadurch würde die Website mehr Informationen bieten. Ebenfalls wurde die Idee eingebracht, ein eigenes Website-Logo hinzuzufügen.
+
+Auf der Rezepteseite soll die Anzeige der Personenanzahl auf den Karten entfernt werden, da diese eher für Verwirrung sorgt. Zudem soll es möglich sein, die Personenanzahl innerhalb eines Rezeptes anzupassen, beispielsweise von zwei auf vier Personen, und das Rezept anschliessend mit dieser angepassten Menge zu speichern. Aktuell wird das Rezept immer mit der Standardanzahl gespeichert.
+
+Auf der Favoritenseite muss die Darstellung der Favoriten verbessert werden. Zurzeit beeinflusst die Anzahl der Seiten die Darstellung der Ansicht, obwohl dies nicht der Fall sein sollte.
+
+Beim Ausfüllen eines Rezeptvorschlags sollte der Name nicht mehr abgefragt werden. Dieser sollte entweder weggelassen oder automatisch mit dem eingeloggten Benutzer übernommen werden. Zudem ist es aktuell etwas unübersichtlich, wenn im Formular Fehler auftreten oder Pflichtfelder nicht ausgefüllt wurden. Dies sollte mit einer klaren Warnmeldung oder durch ein automatisches Zurückspringen zum Anfang der Seite verbessert werden, damit die Nutzer sofort erkennen, dass ein Problem vorliegt.
+
+**Zusammenfassung der Resultate:**  
+Die Validierung zeigte, dass die wichtigsten Kernfunktionen funktionieren und die Anwendung für die Nutzenden verständlich aufgebaut ist. Besonders positiv bewertet wurden die klare Navigation, die Rezeptdetailseite sowie das Vorschlagsformular.
+
+Optimierungspotenzial besteht jedoch noch beim Feinschliff, beispielsweise bei den Fehlermeldungen, dem Verhalten der Anwendung im Fehlerfall sowie bei der korrekten Darstellung einzelner Elemente.
+
+**Abgeleitete Verbesserungen:**  
+  Ich werde für die Verbesserungen wie folgt vorgehen:
+  - Ein Logo bzw. ein Favicon wird für Hauptseite bzw. für den Browsertab erstellt und wird implementiert.
+  - unten bei Kästli den klick aktivieren sodass es auf die seiten springt
+  - Die weiteren Rezepte ganz unten auf der Hauptseite werden entfernt, da der nutzen nicht so gross ist und somit die seite ein wenig redundanter wird.
+  - Die Geschichte bzw. die region aus der das Rezepte herstammt, wäre ein interessantes Feature, welches aber ausserhalb des im Projektrahmen definierte Zeit gemacht werden muss.
+  - Auf dem RecipeCards wird die Anzahl Personen entfernt, da es nur für verwirrung sorgt, da es eine fixe zahl (die standard zahl) ist.
+  - Die Darstellung der Rezepte auf der Favoritenseite wird so angepasst, das es besser übersichtlich ist. 
+  - Personen anzahl speichern wenn man zuerst das macht und nacher favorisiert
+den kreis beim Register kleiner machen (passiert nur wenn eingeloggt weil Feld oben)
+
+vorschlag:
+  - Beim Ausüllen eines Vorschlages wird nicht mehr nach dem Namen gefragt. Es wird von nun an den Namen automatisch aus dem Benutzerkonto nehmen. - Neu wird noch eine bessere Fehlermeldung angezeigt, wenn im Vorschlagsformular etwas falsch ausgefüllt wurde. 
+  - Zudem soll es gleich noch die Bestätigung als Pop up machen und nicht wie jetzt ganz oben im Formular wo man nur sieht wenn man nach oben scrollt. 
+  
 ## 4. Erweiterungen [Optional]
 
 Dokumentiert Erweiterungen über den Mindestumfang hinaus.
