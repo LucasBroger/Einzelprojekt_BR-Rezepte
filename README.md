@@ -187,12 +187,11 @@ Optimierungspotenzial besteht jedoch noch beim Feinschliff, beispielsweise bei d
   - Auf dem RecipeCards wird die Anzahl Personen entfernt, da es nur für verwirrung sorgt, da es eine fixe zahl (die standard zahl) ist.
   - Die Darstellung der Rezepte auf der Favoritenseite wird so angepasst, das es besser übersichtlich ist. 
   - Personen anzahl speichern wenn man zuerst das macht und nacher favorisiert
-den kreis beim Register kleiner machen (passiert nur wenn eingeloggt weil Feld oben)
 
 vorschlag:
   - Beim Ausüllen eines Vorschlages wird nicht mehr nach dem Namen gefragt. Es wird von nun an den Namen automatisch aus dem Benutzerkonto nehmen. - Neu wird noch eine bessere Fehlermeldung angezeigt, wenn im Vorschlagsformular etwas falsch ausgefüllt wurde. 
   - Zudem soll es gleich noch die Bestätigung als Pop up machen und nicht wie jetzt ganz oben im Formular wo man nur sieht wenn man nach oben scrollt. 
-  
+
 ## 4. Erweiterungen [Optional]
 
 Dokumentiert Erweiterungen über den Mindestumfang hinaus.
