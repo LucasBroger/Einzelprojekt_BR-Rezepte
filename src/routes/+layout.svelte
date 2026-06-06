@@ -113,7 +113,7 @@
     </div>
 
     <div class="container footer-bottom">
-      <p>© BR Rezepte — Hochschulprojekt im Modul Prototyping</p>
+      <p>© BR Rezepte — Dein brasilianisches Kochbuch mit Geschmack und Stil.</p>
     </div>
   </footer>
 

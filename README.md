@@ -81,50 +81,55 @@ Die Durchführung erfolgte phasenbasiert entlang der vorgegebenen Methodik. Die 
   Es wurden unterschiedliche Layoutideen für die Plattform geprüft, insbesondere für die Startseite, die Rezeptübersicht und die Rezeptdetailseite. Im Fokus standen eine einfache, lesbare Darstellung und eine klare Trennung zwischen Übersicht, Detailansicht und Formularen.
 
  **Skizze:** 
-Die Skizze bzw. das Mockup wurde mit Figma erstellt. Unter dem Link gelangt man zum Figma:https://www.figma.com/proto/VxaFwKLmULf5bE1EHsp0CW/Rezepte-Brazil?node-id=8762-5&p=f&t=V0Dt1GQB6898xfBu-0&scaling=contain&content-scaling=fixed&page-id=1%3A840.
+Die Skizze bzw. das Mockup wurde mit Figma erstellt. Dabei wurde versucht, die Kernfunktionen korrekt abzubilden und die wesentlichen Erkenntnisse zu berücksichtigen. Über den folgenden Link gelangt man zum Figma-Prototypen:
+https://www.figma.com/proto/VxaFwKLmULf5bE1EHsp0CW/Rezepte-Brazil?node-id=8762-5&p=f&t=V0Dt1GQB6898xfBu-0&scaling=contain&content-scaling=fixed&page-id=1%3A840.
 
 ### 3.3 Decide
 
-- **Gewählte Variante & Begründung:**  
-  Gewählt wurde eine klare und reduzierte Lösung mit Startseite, Rezeptübersicht, Detailseite, Favoriten und Vorschlagsformular. Diese Variante ist übersichtlich, gut erweiterbar und passt zum Ziel, brasilianische Rezepte einfach zugänglich zu machen. Entscheidende Kriterien waren Verständlichkeit, Umsetzbarkeit im Rahmen des Projekts und ein klarer End-to-End-Workflow.
-- **End-to-End-Ablauf:**  
-  Ein Nutzer gelangt von der Startseite zur Rezeptübersicht, filtert oder sucht ein Rezept, öffnet die Detailansicht, liest Zutaten und Zubereitung, speichert bei Bedarf einen Favoriten und kann später über das Vorschlagsformular ein eigenes Rezept einreichen. Damit wird der komplette Ablauf vom Entdecken bis zum Erfassen neuer Inhalte abgedeckt.
-- **Mockup:**  
-  Das Mockup wurde als Grundlage für die visuelle Ausarbeitung genutzt und dient als Orientierung für Struktur, Inhalte und Bedienlogik. Die finale Oberfläche wurde im Verlauf der Umsetzung leicht angepasst, wenn dies für die technische Umsetzung oder bessere Benutzerführung sinnvoll war.
+**Gewählte Variante & Begründung:**  
+  Gewählt wurde eine klare und reduzierte Lösung mit Startseite, Rezeptübersicht, Detailseite, Favoriten und Vorschlagsformular. Diese Variante ist übersichtlich, gut erweiterbar und passt zum Ziel, brasilianische Rezepte einfach zugänglich zu machen. Entscheidend waren Verständlichkeit, Umsetzbarkeit im Rahmen des Projekts und ein klarer Workflow von der Suche bis zum Speichern oder Vorschlagen von Rezepten.
+
+**End-to-End-Ablauf:**  
+  Ein Nutzer gelangt von der Startseite zur Rezeptübersicht, filtert oder sucht ein Rezept, öffnet die Detailansicht, liest Zutaten und Zubereitung, speichert bei Bedarf ein Rezept als Favorit und kann später über das Vorschlagsformular ein eigenes Rezept einreichen. Damit wird der komplette Ablauf vom Entdecken bis zum Erfassen neuer Inhalte abgedeckt.
+
+**Mockup:**  
+  Das Mockup wurde als Grundlage für die visuelle Ausarbeitung genutzt und dient als Orientierung für Struktur, Inhalte und Bedienlogik. Die finale Oberfläche wurde im Verlauf der Umsetzung angepasst, wenn dies für die technische Umsetzung oder eine bessere Benutzerführung sinnvoll war.
 
 ### 3.4 Prototype
 
 #### 3.4.1. Entwurf (Design)
+Die Umsetzung der ersten Version des Prototyps basiert auf der zuvor festgelegten Lösung und wurde so gestaltet, dass die wichtigsten Teile des Workflows bereits einfach und nachvollziehbar genutzt werden können.
 
-Beschreibt die Gestaltung und Interaktion.
+Die Website ist in klar getrennte Bereiche gegliedert: 
+- Startseite
+- Rezeptübersicht
+- Rezeptdetailseite
+- Rezeptvorschlag
+- Login
+- Registrierung
+- Favoriten
 
-> **Hinweis:** Hier wird der **Prototyp** beschrieben, nicht das **Mockup**.
+Die Navigation bleibt konstant sichtbar, damit Nutzende sich jederzeit orientieren können.
 
-**Informationsarchitektur:**  
-  Die Website ist in klar getrennte Bereiche gegliedert: Startseite, Rezeptübersicht, Rezeptdetailseite, Rezeptvorschlag, Login, Registrierung und Favoriten. Die Navigation bleibt konstant sichtbar, damit Nutzende sich jederzeit orientieren können.
-
-**User Interface Design:**  
-  Die Oberfläche verwendet Karten, Panels und klare Abschnittstrennung. Die Rezeptübersicht zeigt mehrere Rezepte in einer Grid-Struktur, die Detailseite arbeitet mit einer grossen Rezeptansicht und klar getrennten Inhaltsblöcken. Formulare sind bewusst einfach aufgebaut und geben direkt Feedback bei Fehlern oder Erfolg.
+Die Oberfläche verwendet Karten, Panels und klare Abschnittstrennung. Die Rezeptübersicht zeigt mehrere Rezepte in einer Grid-Struktur, die Detailseite arbeitet mit einer grossen Rezeptansicht und klar getrennten Inhaltsblöcken. Formulare sind bewusst einfach aufgebaut und geben Feedback bei Fehlern oder Erfolg.
 
 **Designentscheidungen:**  
   - Fokus auf gute Lesbarkeit statt auf überladene Gestaltung.
   - Klare Formulare mit sichtbaren Fehlermeldungen.
   - Favoritenfunktion als schneller Interaktionspunkt direkt auf der Rezeptseite.
   - Rezeptvorschläge als eigener Workflow, damit die Plattform wachsen kann.
-  - Reduzierte, strukturierte Darstellung passend zum Inhalt.
+  - Reduzierte und strukturierte Darstellung passend zum Inhalt.
 
 #### 3.4.2. Umsetzung (Technik)
-
-Fasst die technische Realisierung zusammen.
 
 - **Technologie-Stack:**  
   SvelteKit, JavaScript, HTML, CSS und MongoDB.
 - **Tooling:**  
   Visual Studio Code, Git, GitHub, Netlify für Deployment sowie KI-Unterstützung für Refactoring, Fehlersuche und Text- bzw. Codevorschläge. Den KI-Einsatz beschreibe ich zusätzlich im Kapitel KI-Deklaration.
 - **Struktur & Komponenten:**  
-  Die App ist in Routen und wiederverwendbare Komponenten aufgeteilt. Wichtige Seiten sind die Rezeptübersicht, Detailseite, Favoritenansicht, Login/Registrierung und das Rezeptvorschlagsformular. Wiederverwendbare Komponenten sind unter anderem RecipeCard, FavoriteButton und LoginPrompt.
+  Die App ist in Routen und wiederverwendbare Komponenten aufgeteilt. Wichtige Seiten sind die Rezeptübersicht, Detailseite, Favoritenansicht, Login- und Registrierungsbereich sowie das Rezeptvorschlagsformular. Wiederverwendbare Komponenten sind unter anderem RecipeCard, FavoriteButton und LoginPrompt.
 - **Daten & Schnittstellen:**  
-  Rezepte und Rezeptvorschläge werden in MongoDB gespeichert und serverseitig über SvelteKit-Ladefunktionen und Actions verarbeitet. Favoriten werden über eine API oder serverseitige Logik mit dem eingeloggten Nutzer verknüpft.
+  Rezepte und Rezeptvorschläge werden in MongoDB gespeichert und in SvelteKit serverseitig geladen bzw. über Actions verarbeitet. Favoriten werden über eine API oder serverseitige Logik mit dem eingeloggten Nutzer verknüpft.
 - **Deployment:**  
   Die App wurde auf Netlify deployed und ist online zugänglich.
 - **Besondere Entscheidungen:**  
@@ -136,68 +141,69 @@ Fasst die technische Realisierung zusammen.
 ### 3.5 Validate
 
 **URL der getesteten Version:**  
-  Die getestete Version ist die auf Netlify deployte Live-Version. Die Version findet man unter folgender URL: https://6a0d6d371e8c370008c75c29--brasilianischerezepte.netlify.app/
+  Für das Testen wurde die damals auf Netlify deployte Live-Version verwendet. Die Version findet man unter folgender URL: https://6a0d6d371e8c370008c75c29--brasilianischerezepte.netlify.app/
 
 **Ziele der Prüfung:**  
-Ich habe mir folgende Fragestellungen gestellt, um herauszufinden, ob ich mit meinem Projekt zufrieden bin:
+Ich habe mir folgende Fragestellungen gestellt, um herauszufinden, ob die Anwendung aus Nutzersicht verständlich und sinnvoll aufgebaut ist:
 
-  - Ist meine Website logisch und simpel aufgebaut?
-  - Kann man Rezepte favorisieren, aber nur mit einem Login?
-  - Kann man Rezeptvorschläge erstellen, aber nur mit einem Login?
-  - Kann man die Mengenangaben innerhalb eines Rezeptes anpassen, sodass die Rezepte für eine bestimmte Anzahl Personen zubereitet werden können?
+  - Ist die Website logisch und simpel aufgebaut?
+  - Kann man Rezepte favorisieren, aber nur mit Login?
+  - Kann man Rezeptvorschläge erstellen, aber nur mit Login?
+  - Kann man die Mengenangaben innerhalb eines Rezepts anpassen, sodass die Rezepte für eine bestimmte Anzahl Personen zubereitet werden können?
   - Ist die Bedienung verständlich und nachvollziehbar?
 
 **Vorgehen:**  
 Zuerst habe ich die Deployment-Prüfung selbst durchgeführt, um zu überprüfen, ob alle Funktionen korrekt laufen. Anschliessend habe ich die Anwendung mit vier Testpersonen aus meinem Umfeld evaluiert. Jede Person besuchte die Website eigenständig auf dem persönlichem Laptop, während ich die Nutzung beobachtete. Die Testpersonen wurden gebeten, sich so zu verhalten, als wäre ich nicht anwesend.
 
-  Ich habe den Testpersonen ein Testszenario sowie die dazugehörigen Testaufgaben gegeben. Diese wurden in einem Word-Dokument erfasst und den Testpersonen anschliessend übergeben. Während oder nach dem Test wurden unter anderem folgende Fragen gestellt:
+Den Testpersonen wurden ein Testszenario sowie konkrete Testaufgaben gegeben. Diese wurden in einem Word-Dokument festgehalten und anschliessend verwendet. Während oder nach dem Test wurden unter anderem folgende Fragen gestellt:
 
   - Was war dein erster Eindruck, als du die Website gesehen hast?
   - Fandest du die Website simpel und logisch gestaltet?
-  -	Hast du leicht herausgefunden, wie man ein Rezept favorisiert? Hast du Verbesserungsvorschläge?
-  -	Hast du leicht herausgefunden, wie man einen Rezeptvorschlag erstellt? Hast du Verbesserungsvorschläge?
+  -	Hast du leicht herausgefunden, wie man ein Rezept favorisiert?
+  -	Hast du leicht herausgefunden, wie man einen Rezeptvorschlag erstellt?
+  - Welche Verbesserungsvorschläge hast du?
 
-  Zusätzlich wurde die Anwendung am Schluss aus Sicht der Nutzer geprüft, um Fehler und Unklarheiten zu erkennen.
+Zusätzlich wurde die Anwendung am Schluss aus Sicht der Nutzenden nochmals geprüft, um Fehler und Unklarheiten zu erkennen.
 
 **Stichprobe:**  
-  Die erste Testperson war ich selbst im Rahmen der Entwicklung. Danach habe ich eine Gruppe von vier Personen aus der Klasse befragt, wobei jedes Mitglied der Gruppe meine Website alleine besucht hat. Somit konnte sichergestellt werden, dass die Testpersonen auf sich selbst angewiesen waren, wie es auch in einem realen Anwendungsfall wäre.
+Die erste Testperson war ich selbst im Rahmen der Entwicklung. Danach habe ich vier Personen aus meinem Umfeld einzeln testen lassen. Dadurch konnte sichergestellt werden, dass die Testpersonen die Website eigenständig benutzen und nicht von anderen beeinflusst werden.
 
 **Aufgaben/Szenarien:**
   - *Testszenario:* Du bist ein leidenschaftlicher Hobbykoch und suchst nach Rezepten. Zufälligerweise bist du auf meine Website gestossen und hast Lust bekommen, brasilianische Rezepte selbst zu machen.
 
-  - *Testaufgabe 1:* Dieses Wochenende erhältst du Besuch (4 Personen) und suchst noch nach einem Dessertrezept. Damit du es am Wochenende nachmachen kannst, musst du es noch speichern.
+  - *Testaufgabe 1:* Dieses Wochenende erhältst du Besuch von vier Personen und suchst noch nach einem Dessertrezept. Damit du es am Wochenende nachmachen kannst, musst du es speichern.
   
   - *Testaufgabe 2:* Am Wochenende nach dem Essen hat dir ein Freund gesagt, dass du einmal das Gericht «Bolinhas de Cacau» machen solltest. Du findest dieses Dessert jedoch nicht auf der Website, würdest es aber gerne dort sehen.
 
-  Zudem soll zusätzlich auf Fehler- und Erfolgsmeldungen geachtet werden.
+  Zusätzlich wurde darauf geachtet, ob Fehler- und Erfolgsmeldungen klar verständlich sind.
 
 **Kennzahlen & Beobachtungen:**  
-  Alle Testpersonen hatten einen guten ersten Eindruck der Website. Ihnen gefiel insbesondere die Farbwahl mit den brasilianischen Farben. Ebenfalls positiv bewertet wurden die klare Struktur und der logische Aufbau der Seite. Die Slides mit den meistangeklickten Rezepten kamen ebenfalls gut an. Zudem fanden die Testpersonen es sinnvoll, dass man zuerst ein Login erstellen muss, um die speziellen Funktionen nutzen zu können.
+Alle Testpersonen hatten einen guten ersten Eindruck von der Website. Ihnen gefielen insbesondere die Farbwahl, die klare Struktur und der logische Aufbau der Seite. Auch die Rezeptkarten und die Favoritenfunktion wurden positiv bewertet. Zudem fanden die Testpersonen es sinnvoll, dass man sich zuerst einloggen muss, um spezielle Funktionen zu nutzen.
 
-Die Testpersonen fanden sich bei den Aufgaben schnell zurecht. Dabei konnte ich jedoch auch kleinere Punkte erkennen, die verbessert werden könnten. Beispielsweise sollte beim Speichern eines Rezeptes auch die aktuell ausgewählte Anzahl Personen mitgespeichert werden.
+Die Testpersonen fanden sich bei den Aufgaben schnell zurecht. Trotzdem konnten kleinere Punkte erkannt werden, die verbessert werden sollten. Beispielsweise sollte beim Speichern eines Rezepts auch die aktuell ausgewählte Anzahl Personen mitgespeichert werden.
 
-Es gab ausserdem einige Verbesserungsvorschläge und Anmerkungen. Die Rezepte ganz unten auf der Hauptseite sollen entfernt werden. Zusätzlich wurde vorgeschlagen, Informationen zur Geschichte sowie zur Herkunft oder Region eines Gerichtes anzuzeigen. Dadurch würde die Website mehr Informationen bieten. Ebenfalls wurde die Idee eingebracht, ein eigenes Website-Logo hinzuzufügen.
+Es gab ausserdem weitere Verbesserungsvorschläge. Die Rezepte ganz unten auf der Hauptseite sollen entfernt werden, da der Nutzen gering ist. Zusätzlich wurde vorgeschlagen, Informationen zur Geschichte sowie zur Herkunft oder Region eines Gerichts anzuzeigen. Dadurch würde die Website mehr inhaltliche Tiefe erhalten. Ebenfalls wurde die Idee eingebracht, ein eigenes Website-Logo zu erstellen und zu integrieren.
 
-Auf der Rezepteseite soll die Anzeige der Personenanzahl auf den Karten entfernt werden, da diese eher für Verwirrung sorgt. Zudem soll es möglich sein, die Personenanzahl innerhalb eines Rezeptes anzupassen, beispielsweise von zwei auf vier Personen, und das Rezept anschliessend mit dieser angepassten Menge zu speichern. Aktuell wird das Rezept immer mit der Standardanzahl gespeichert.
+Auf der Rezeptseite soll die Anzeige der Personenanzahl auf den Karten entfernt werden, da sie eher für Verwirrung sorgt. Zudem soll es möglich sein, die Personenanzahl innerhalb eines Rezepts anzupassen, beispielsweise von zwei auf vier Personen, und das Rezept anschliessend mit dieser angepassten Menge zu speichern. Aktuell wird das Rezept immer mit der Standardanzahl gespeichert.
 
-Auf der Favoritenseite muss die Darstellung der Favoriten verbessert werden. Zurzeit beeinflusst die Anzahl der Seiten die Darstellung der Ansicht, obwohl dies nicht der Fall sein sollte.
+Auf der Favoritenseite muss die Darstellung der Favoriten übersichtlicher werden. Zurzeit beeinflusst die Anzahl der Seiten die Darstellung der Ansicht, obwohl dies nicht der Fall sein sollte.
 
-Beim Ausfüllen eines Rezeptvorschlags sollte der Name nicht mehr abgefragt werden. Dieser sollte entweder weggelassen oder automatisch mit dem eingeloggten Benutzer übernommen werden. Zudem ist es aktuell etwas unübersichtlich, wenn im Formular Fehler auftreten oder Pflichtfelder nicht ausgefüllt wurden. Dies sollte mit einer klaren Warnmeldung oder durch ein automatisches Zurückspringen zum Anfang der Seite verbessert werden, damit die Nutzer sofort erkennen, dass ein Problem vorliegt.
+Beim Ausfüllen eines Rezeptvorschlags sollte der Name nicht mehr abgefragt werden. Dieser sollte entweder weggelassen oder automatisch mit dem eingeloggten Benutzer übernommen werden. Zudem ist es aktuell etwas unübersichtlich, wenn im Formular Fehler auftreten oder Pflichtfelder nicht ausgefüllt wurden. Dies sollte mit einer klaren Warnmeldung oder durch ein automatisches Zurückspringen zum Anfang der Seite verbessert werden, damit die Nutzenden sofort erkennen, dass ein Problem vorliegt.
 
 **Zusammenfassung der Resultate:**  
-Die Validierung zeigte, dass die wichtigsten Kernfunktionen funktionieren und die Anwendung für die Nutzenden verständlich aufgebaut ist. Besonders positiv bewertet wurden die klare Navigation, die Rezeptdetailseite sowie das Vorschlagsformular.
+Die Validierung zeigte, dass die wichtigsten Kernfunktionen funktionieren und die Anwendung für die Nutzenden verständlich aufgebaut ist. Besonders positiv bewertet wurden die klare Navigation, die Rezeptdetailseite sowie das Rezeptvorschlagsformular.
 
-Optimierungspotenzial besteht jedoch noch beim Feinschliff, beispielsweise bei den Fehlermeldungen, dem Verhalten der Anwendung im Fehlerfall sowie bei der korrekten Darstellung einzelner Elemente.
+Optimierungspotenzial besteht jedoch noch beim Feinschliff, beispielsweise bei den Fehlermeldungen, beim Verhalten im Fehlerfall sowie bei der korrekten Darstellung einzelner Elemente.
 
 **Abgeleitete Verbesserungen:**  
   Ich werde für die Verbesserungen wie folgt vorgehen:
 * Ein Logo bzw. ein Favicon für die Hauptseite und den Browsertab wird erstellt und implementiert.
-* Die Kästchen unten auf der Website werden nicht klickbar gemacht, da ich nicht denke, dass dies deren Sinn ist.
-* Die weiteren Rezepte ganz unten auf der Hauptseite werden entfernt, da der Nutzen nicht so gross ist und die Seite dadurch etwas weniger redundant wird.
-* Die Geschichte bzw. die Region, aus der das Rezept stammt, wäre ein interessantes Feature. Dieses müsste jedoch ausserhalb des im Projektrahmen definierten Zeitaufwands umgesetzt werden.
-* Auf den RecipeCards wird die Anzahl Personen entfernt, da dies für Verwirrung sorgt, weil immer eine fixe Zahl (die Standardzahl) angezeigt wird.
-* Die Darstellung der Rezepte auf der Favoritenseite wird so angepasst, dass sie übersichtlicher ist.
-* Die Personenanzahl wird nach der Speicherung in der Favoritenliste sichtbar sein. Im Rezept selbst bleibt sie jedoch unverändert.
+* Die Kästchen unten auf der Website werden nicht klickbar gemacht, da dies aus Nutzersicht wenig sinnvoll ist.
+* Die weiteren Rezepte ganz unten auf der Hauptseite werden entfernt, da der Nutzen gering ist und die Seite dadurch weniger redundant wird.
+* Die Geschichte bzw. die Region, aus der ein Rezept stammt, wäre ein interessantes Zusatzfeature, müsste aber ausserhalb des vorgesehenen Projektumfangs umgesetzt werden.
+* Auf den RecipeCards wird die Anzahl Personen entfernt, da dies für Verwirrung sorgt, weil immer nur die Standardzahl angezeigt wird.
+* Die Darstellung der Rezepte auf der Favoritenseite wird übersichtlicher gestaltet.
+* Die Personenanzahl wird nach dem Speichern in der Favoritenliste sichtbar sein. Im Rezept selbst bleibt sie jedoch unverändert.
 * Beim Ausfüllen eines Vorschlags wird nicht mehr nach dem Namen gefragt. Dieser wird neu automatisch aus dem Benutzerkonto übernommen.
 * Neu wird zudem eine bessere Fehlermeldung angezeigt, wenn im Vorschlagsformular etwas falsch ausgefüllt wurde.
 * Ausserdem soll die Bestätigung künftig als Pop-up angezeigt werden und nicht mehr wie bisher ganz oben im Formular, wo sie nur sichtbar ist, wenn man nach oben scrollt.
@@ -205,25 +211,21 @@ Optimierungspotenzial besteht jedoch noch beim Feinschliff, beispielsweise bei d
 
 ## 4. Erweiterungen [Optional]
 
-Dokumentiert Erweiterungen über den Mindestumfang hinaus.
-
-> **Hinweis:** Jede Erweiterung ist separat nach dem folgenden Schema zu beschreiben.
-
 ### 4.1 Favoritenfunktion
 - **Beschreibung & Nutzen:**  
-  Eingeloggte Nutzende können Rezepte als Favoriten speichern und später schneller wiederfinden. Das erhöht den Nutzen der Plattform, weil persönliche Rezeptlisten möglich werden.
+  Eingeloggte Nutzende können Rezepte als Favoriten speichern und später schneller wiederfinden. Dadurch entsteht eine persönliche Merkliste mit Rezepten, die für später relevant sind.
 - **Wo umgesetzt:**  
-  - **Frontend:** FavoriteButton-Komponente und Anzeige in Rezeptkarten bzw. Detailseite.
+  - **Frontend:** FavoriteButton-Komponente sowie Anzeige in Rezeptkarten und in der Detailansicht.
   - **Backend:** API bzw. serverseitige Logik zum Speichern und Entfernen von Favoriten.
   - **Datenbank:** Speicherung der Favoritenbeziehungen im Benutzerkontext.
 - **Referenz:**  
-  Favoriten sind in der Rezeptübersicht, Detailansicht und im Favoritenbereich sichtbar.
+  Die Funktion ist in der Rezeptübersicht, in der Detailansicht und im Favoritenbereich sichtbar.
 - **Aus Evaluation abgeleitet?:**  
-  Ja, die Funktion entspricht dem Bedarf, Rezepte für später zu merken.
+  Ja, weil viele Nutzende Rezepte speichern möchten, um später schnell darauf zugreifen zu können.
 
 ### 4.2 Rezeptvorschläge
 - **Beschreibung & Nutzen:**  
-  Nutzende können eigene Rezeptideen einreichen. Das erweitert die Plattform und schafft einen klaren Daten-Erfassungsworkflow.
+  Nutzende können eigene Rezeptideen einreichen. Dadurch wird die Plattform erweitert und um neue Inhalte ergänzt, ohne dass diese manuell durch die Plattform gepflegt werden müssen.
 - **Wo umgesetzt:**  
   - **Frontend:** Vorschlagsformular mit Validierung und Feedback.
   - **Backend:** SvelteKit Action für Validierung und Speicherung.
@@ -231,11 +233,11 @@ Dokumentiert Erweiterungen über den Mindestumfang hinaus.
 - **Referenz:**  
   Die Funktion ist auf der Seite /vorschlag umgesetzt.
 - **Aus Evaluation abgeleitet?:**  
-  Ja, weil ein eigener Workflow zur Erweiterung der Plattform sehr sinnvoll ist.
+  Ja, weil ein klarer Workflow zum Einreichen neuer Rezepte einen echten Mehrwert bietet.
 
 ### 4.3 Rezeptfilter und Suche
 - **Beschreibung & Nutzen:**  
-  Die Rezeptübersicht kann nach Suchbegriff, Menüart, Aufwand und Zeitaufwand gefiltert werden. Dadurch finden Nutzende schneller passende Gerichte.
+  Die Rezeptübersicht kann nach Suchbegriff, Menüart, Aufwand und Zeitaufwand gefiltert werden. Dadurch finden Nutzende passende Gerichte schneller und können die Auswahl besser eingrenzen.
 - **Wo umgesetzt:**  
   - **Frontend:** Filterformular und Rezeptkartenansicht.
   - **Backend:** Filterlogik in der Rezeptübersicht.
@@ -247,10 +249,10 @@ Dokumentiert Erweiterungen über den Mindestumfang hinaus.
 
 ## 5. Projektorganisation [Optional]
 
-Beispiele:
-
 - **Repository & Struktur:**  
-  Das Projekt ist in GitHub versioniert und strukturiert aufgebaut. Die App besteht aus SvelteKit-Routen, Komponenten, Serverdateien und einer zentralen Datenbankanbindung.
+  Das Projekt ist in GitHub versioniert und übersichtlich aufgebaut. Die Anwendung ist in SvelteKit-Routen, Komponenten, Serverlogik und statische Dateien getrennt, damit die Struktur nachvollziehbar bleibt.
+- **Arbeitsweise:**  
+  Fehler wurden laufend über lokale Tests überprüft und anschliessend behoben. So konnte das Projekt iterativ verbessert werden.
 - **Issue-Management:**  
   Die Entwicklung wurde schrittweise umgesetzt. Fehler und offene Punkte wurden über Build-Logs, lokale Tests und direkte Korrekturen bearbeitet.
 - **Commit-Praxis:**  
@@ -258,31 +260,29 @@ Beispiele:
 
 ## 6. KI-Deklaration
 
-Die folgende Deklaration ist verpflichtend und beschreibt den Einsatz von KI im Projekt.
-
 ### 6.1 KI-Tools
+Die folgende Deklaration beschreibt den Einsatz von KI im Projekt transparent und nachvollziehbar.
 
 - **Eingesetzte Tools:**  
-  Perplexity, ein KI-Assistent, wurde zur Unterstützung bei Fehlersuche, Refactoring, Textentwürfen und Strukturierung der Dokumentation. Das Grundgerüst wurde mittels Masterprompt mit GitHub Copilot erstellt.
+  Perplexity wurde zur Unterstützung bei Fehlersuche, Refactoring, Textentwürfen und Strukturierung der Projektdokumentation verwendet. GitHub Copilot wurde zusätzlich für die Erstellung des Codes eingesetzt.
 - **Zweck & Umfang:**  
-  KI wurde verwendet, um Build-Fehler zu analysieren, SvelteKit- und MongoDB-Logik zu bereinigen, Codebeispiele zu korrigieren und die Projektdokumentation sprachlich zu verbessern. Die eigentliche Umsetzung, Anpassung und finale Entscheidung lagen bei mir.
+  KI wurde verwendet, um Build-Fehler zu analysieren, SvelteKit- und MongoDB-Logik zu prüfen, Codebeispiele zu korrigieren und die Projektdokumentation sprachlich zu verbessern. Die endgültige Auswahl, Anpassung und Umsetzung lagen bei mir.
 - **Eigene Leistung (Abgrenzung):**  
   Die Projektidee, die inhaltliche Ausrichtung, die Auswahl der Funktionen, die technische Umsetzung, die Debugging-Entscheide und die finale Integration wurden eigenständig erarbeitet und überarbeitet.
 
 ### 6.2 Prompt-Vorgehen
-
-Ich habe KI vor allem für konkrete Einzelfragen und Codekorrekturen verwendet. Dabei wurden Fehlerlogs, einzelne Dateien oder Textbausteine als Grundlage gegeben, damit die Antworten gezielt auf das Projekt bezogen sind. Wichtige Inhalte wurden anschliessend selbst geprüft, angepasst und in den Code bzw. die Doku übernommen. Beim Prompting wurde darauf geachtet, keine fremden Inhalte ungeprüft zu übernehmen und die Resultate auf Korrektheit, Verständlichkeit und Passung zum Projekt zu prüfen.
+Ich habe KI vor allem für konkrete Einzelfragen, Codekorrekturen und Formulierungshilfen verwendet. Dabei wurden Fehlerlogs, einzelne Dateien oder Textbausteine als Grundlage gegeben, damit die Antworten gezielt auf das Projekt bezogen sind.
 
 ### 6.3 Reflexion
+KI war hilfreich, um schneller Fehler zu finden, bessere Formulierungen zu erstellen und repetitive Aufgaben zu beschleunigen. Gleichzeitig bleibt die Verantwortung für fachliche Richtigkeit, Urheberrecht und Projektqualität bei mir.
 
-KI war hilfreich, um schneller Fehler zu finden, bessere Formulierungen zu erstellen und repetitive Aufgaben zu beschleunigen. Gleichzeitig bleibt die Verantwortung für fachliche Richtigkeit, Urheberrecht und Projektqualität bei mir. Besonders wichtig war deshalb die Kontrolle aller Vorschläge und die Anpassung an die konkrete Projektstruktur.
+Besonders wichtig war deshalb die kritische Kontrolle aller Vorschläge und die Anpassung an die konkrete Projektstruktur. So konnte KI als Unterstützung genutzt werden, ohne die eigene Verantwortung für das Resultat auszulagern.
 
 ## 7. Anhang [Optional]
 
-Beispiele:
 - **Quellen:**  
   Moodle-Vorlagen, Vorlesungsunterlagen, eigene Screenshots, Projektcode und deployte Anwendung.
 - **Testskript & Materialien:**  
-  Interne Testschritte für Login, Rezeptübersicht, Favoriten und Rezeptvorschlag.
+  Testszenario, Testaufgaben und Leitfragen aus der Evaluation.
 - **Rohdaten/Auswertung:**  
-  Notizen aus der Validierung, Build-Logs und Fehlerkorrekturen.
+  Notizen aus der Validierung, Beobachtungen der Testpersonen, Build-Logs und Fehlerkorrekturen.
