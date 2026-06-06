@@ -130,7 +130,7 @@ Fasst die technische Realisierung zusammen.
 ### 3.5 Validate
 
 **URL der getesteten Version:**  
-  Die getestete Version ist die auf Netlify deployte Live-Version. Die URL findet man hier: https://6a0d6d371e8c370008c75c29--brasilianischerezepte.netlify.app/
+  Die getestete Version ist die auf Netlify deployte Live-Version. Die Version findet man unter folgender URL: https://6a0d6d371e8c370008c75c29--brasilianischerezepte.netlify.app/
 **Ziele der Prüfung:**  
 Ich habe mir folgende Fragestellungen gestellt, um herauszufinden, ob ich mit meinem Projekt zufrieden bin:
 
@@ -180,15 +180,17 @@ Optimierungspotenzial besteht jedoch noch beim Feinschliff, beispielsweise bei d
 
 **Abgeleitete Verbesserungen:**  
   Ich werde für die Verbesserungen wie folgt vorgehen:
-  - Ein Logo bzw. ein Favicon wird für Hauptseite bzw. für den Browsertab erstellt und wird implementiert.
-  - Die Kästchen unten auf der Website mache ich nicht klickbar, weil ich nicht denke, dass das der Sinn davon ist.
-  - Die weiteren Rezepte ganz unten auf der Hauptseite werden entfernt, da der nutzen nicht so gross ist und somit die seite ein wenig redundanter wird.
-  - Die Geschichte bzw. die region aus der das Rezepte herstammt, wäre ein interessantes Feature, welches aber ausserhalb des im Projektrahmen definierte Zeit gemacht werden muss.
-  - Auf dem RecipeCards wird die Anzahl Personen entfernt, da es nur für verwirrung sorgt, da es eine fixe zahl (die standard zahl) ist.
-  - Die Darstellung der Rezepte auf der Favoritenseite wird so angepasst, das es besser übersichtlich ist. 
-  - Personen anzahl wird bei der speicherung nacher in der favoritenliste sichtbar aber nacher im rezept selber, bleibt es gleich
-  - Beim Ausüllen eines Vorschlages wird nicht mehr nach dem Namen gefragt. Es wird von nun an den Namen automatisch aus dem Benutzerkonto nehmen. - Neu wird noch eine bessere Fehlermeldung angezeigt, wenn im Vorschlagsformular etwas falsch ausgefüllt wurde. 
-  - Zudem soll es gleich noch die Bestätigung als Pop up machen und nicht wie jetzt ganz oben im Formular wo man nur sieht wenn man nach oben scrollt. 
+* Ein Logo bzw. ein Favicon für die Hauptseite und den Browsertab wird erstellt und implementiert.
+* Die Kästchen unten auf der Website werden nicht klickbar gemacht, da ich nicht denke, dass dies deren Sinn ist.
+* Die weiteren Rezepte ganz unten auf der Hauptseite werden entfernt, da der Nutzen nicht so gross ist und die Seite dadurch etwas weniger redundant wird.
+* Die Geschichte bzw. die Region, aus der das Rezept stammt, wäre ein interessantes Feature. Dieses müsste jedoch ausserhalb des im Projektrahmen definierten Zeitaufwands umgesetzt werden.
+* Auf den RecipeCards wird die Anzahl Personen entfernt, da dies für Verwirrung sorgt, weil immer eine fixe Zahl (die Standardzahl) angezeigt wird.
+* Die Darstellung der Rezepte auf der Favoritenseite wird so angepasst, dass sie übersichtlicher ist.
+* Die Personenanzahl wird nach der Speicherung in der Favoritenliste sichtbar sein. Im Rezept selbst bleibt sie jedoch unverändert.
+* Beim Ausfüllen eines Vorschlags wird nicht mehr nach dem Namen gefragt. Dieser wird neu automatisch aus dem Benutzerkonto übernommen.
+* Neu wird zudem eine bessere Fehlermeldung angezeigt, wenn im Vorschlagsformular etwas falsch ausgefüllt wurde.
+* Ausserdem soll die Bestätigung künftig als Pop-up angezeigt werden und nicht mehr wie bisher ganz oben im Formular, wo sie nur sichtbar ist, wenn man nach oben scrollt.
+ 
 
 ## 4. Erweiterungen [Optional]
 
