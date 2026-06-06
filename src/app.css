@@ -167,16 +167,208 @@ textarea {
   padding: 2rem 0 3rem;
 }
 
+/* GLOBALER FOOTER */
+
 .site-footer {
-  padding: 1.5rem 0 2rem;
-  color: var(--muted);
+  margin-top: auto;
+  background:
+    linear-gradient(135deg, rgba(31, 107, 59, 0.98), rgba(23, 77, 43, 0.98));
+  color: rgba(255, 255, 255, 0.94);
+  padding: 2.25rem 0 1.25rem;
+  box-shadow: 0 -10px 30px rgba(31, 42, 31, 0.08);
 }
 
-.site-footer .container {
-  border-top: 1px solid var(--border);
-  padding-top: 1.25rem;
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.footer-brand {
+  max-width: 34rem;
+}
+
+.footer-brand-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.footer-logo {
+  width: 62px;
+  height: 62px;
+  object-fit: contain;
+  flex-shrink: 0;
+  background: rgba(255, 255, 255, 0.10);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 18px;
+  padding: 0.45rem;
+}
+
+.footer-brand-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.footer-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  line-height: 1.1;
+  color: white;
+}
+
+.footer-subtitle {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.1;
+}
+
+.footer-text {
+  margin: 0;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.78);
+  max-width: 32rem;
+}
+
+.footer-nav {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.footer-nav h2 {
+  margin: 0 0 0.35rem;
+  font-size: 1.05rem;
+  color: white;
+}
+
+.footer-nav a {
+  color: rgba(255, 255, 255, 0.78);
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.footer-nav a:hover {
+  color: white;
+  transform: translateX(2px);
+}
+
+.footer-bottom {
+  margin-top: 1.75rem;
+  padding-top: 1.1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.68);
   font-size: 0.95rem;
 }
+
+/* RECHTSTEXTE */
+
+.legal-page {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.legal-hero {
+  margin-bottom: 1.5rem;
+  padding: 1.75rem;
+  border-radius: 26px;
+  background:
+    linear-gradient(135deg, rgba(31, 107, 59, 0.96), rgba(23, 77, 43, 0.96));
+  color: white;
+  box-shadow: var(--shadow);
+}
+
+.legal-hero h1 {
+  margin: 0 0 0.5rem;
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  line-height: 1.08;
+}
+
+.legal-hero p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.86);
+  line-height: 1.7;
+  max-width: 60ch;
+}
+
+.legal-panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+.legal-section + .legal-section {
+  margin-top: 1.75rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--border);
+}
+
+.legal-section h2 {
+  margin: 0 0 1rem;
+  font-size: 1.45rem;
+  line-height: 1.2;
+}
+
+.legal-section h3 {
+  margin: 1.25rem 0 0.6rem;
+  font-size: 1.05rem;
+  color: var(--primary);
+}
+
+.legal-section p,
+.legal-section li,
+.legal-meta-value {
+  line-height: 1.75;
+  color: var(--text);
+}
+
+.legal-section p {
+  margin: 0.75rem 0 0;
+}
+
+.legal-list {
+  margin: 0.85rem 0 0;
+  padding-left: 1.25rem;
+  display: grid;
+  gap: 0.65rem;
+}
+
+.legal-meta {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.legal-meta-item {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.legal-meta-label {
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.legal-note {
+  margin-top: 1rem;
+  padding: 1rem 1.1rem;
+  border-radius: 18px;
+  background: rgba(31, 107, 59, 0.08);
+  border: 1px solid rgba(31, 107, 59, 0.14);
+  color: var(--text);
+}
+
+/* REST BESTEHENDER CODE */
 
 .hero-panel {
   background:
@@ -269,6 +461,14 @@ textarea {
   border-radius: 24px;
   padding: 1.25rem;
   box-shadow: var(--shadow);
+  transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
+  will-change: transform;
+}
+
+.panel:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 36px rgba(31, 42, 31, 0.14);
+  border-color: rgba(31, 107, 59, 0.22);
 }
 
 .page-intro {
@@ -883,11 +1083,11 @@ textarea {
 }
 
 @media (max-width: 900px) {
-
   .detail-hero,
   .recipe-hero,
   .detail-sections,
-  .recipe-content-grid {
+  .recipe-content-grid,
+  .footer-grid {
     grid-template-columns: 1fr;
   }
 
@@ -928,7 +1128,8 @@ textarea {
     text-align: center;
   }
 
-  .hero-panel {
+  .hero-panel,
+  .legal-hero {
     padding: 1.4rem;
     border-radius: 22px;
   }
@@ -950,6 +1151,10 @@ textarea {
   .slider-btn {
     width: 40px;
     height: 40px;
+  }
+
+  .footer-brand-link {
+    align-items: flex-start;
   }
 }
 
@@ -1023,7 +1228,6 @@ textarea {
 }
 
 @media (prefers-reduced-motion: reduce) {
-
   *,
   *::before,
   *::after {

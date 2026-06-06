@@ -76,8 +76,44 @@
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <p>© BR Rezepte — Dein brasilianisches Kochbuch mit Geschmack und Stil.</p>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="footer-brand-link" aria-label="Zur Startseite">
+          <img
+            src="/br-rezepte-logo.svg"
+            alt="BR Rezepte Logo"
+            class="footer-logo"
+          />
+          <div class="footer-brand-copy">
+            <span class="footer-title">BR Rezepte</span>
+            <span class="footer-subtitle">Brasilianisches Kochbuch</span>
+          </div>
+        </a>
+
+        <p class="footer-text">
+          Entdecke brasilianische Klassiker, speichere deine Favoriten und finde
+          neue Rezepte für Alltag, Familie und besondere Anlässe an einem Ort.
+        </p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer Navigation">
+        <h2>Navigation</h2>
+        <a href="/">Startseite</a>
+        <a href="/rezepte">Rezepte</a>
+        <a href="/vorschlag">Vorschlag</a>
+        <a href="/favorites">Favoriten</a>
+      </nav>
+
+      <nav class="footer-nav" aria-label="Rechtliches">
+        <h2>Rechtliches</h2>
+        <a href="/footer/impressum">Impressum</a>
+        <a href="/footer/datenschutz">Datenschutz</a>
+        <a href="/footer/nutzungsbedingungen">Nutzungsbedingungen</a>
+      </nav>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© BR Rezepte — Hochschulprojekt im Modul Prototyping</p>
     </div>
   </footer>
 

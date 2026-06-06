@@ -34,8 +34,7 @@
     <div class="page-intro">
       <h2>Angesagte Rezepte</h2>
       <p>
-        Beliebte brasilianische Gerichte mit Bildvorschau zum direkten
-        Entdecken.
+        Die beliebtesten Rezepte auf unserer Website.
       </p>
     </div>
 

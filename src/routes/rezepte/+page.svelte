@@ -86,9 +86,11 @@
 
 {#if data.rezepte.length > 0}
   <section class="section-block">
-    <div class="card-grid">
+    <div class="favorites-grid">
       {#each data.rezepte as recipe}
-        <RecipeCard recipe={recipe} initialFavorite={recipe.initialFavorite} />
+        <div class="favorites-grid-item">
+          <RecipeCard recipe={recipe} initialFavorite={recipe.initialFavorite} />
+        </div>
       {/each}
     </div>
   </section>

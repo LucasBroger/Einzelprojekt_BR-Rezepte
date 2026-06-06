@@ -21,36 +21,41 @@
 
 ## 1. Ausgangslage
 
-Wie können brasilianische Essens-Liebhaber das nötige Wissen, ein passendes Rezept und die richtigen Produkte finden, um brasilianisches Essen zu Hause selbst zu machen?
+Wie können brasilianische Essensliebhaber das nötige Wissen, ein passendes Rezept und die richtigen Zutaten finden, um brasilianische Gerichte zu Hause selbst zuzubereiten?
 
-- **Problem:** Viele brasilianische Rezepte sind zwar online auffindbar, aber oft unübersichtlich, schlecht strukturiert oder nicht auf deutschsprachige Nutzerinnen und Nutzer zugeschnitten. Dadurch ist es schwierig, schnell ein passendes Rezept zu finden, die Zutaten zu verstehen und das Gericht zu Hause wirklich nachzukochen. Zusätzlich fehlt häufig eine einfache Möglichkeit, Rezepte zu speichern oder neue Rezeptideen zu sammeln.
-- **Ziele:**
-  - Eine einfache und verständliche Rezeptplattform für brasilianische Gerichte.
-  - Rezepte übersichtlich darstellen und durchsuchen.
-  - Nutzerinnen und Nutzern ermöglichen, Rezepte als Favoriten zu speichern.
+**Problem:** Viele brasilianische Rezepte sind online zwar vorhanden, aber oft unübersichtlich, schlecht strukturiert oder nicht auf deutschsprachige Nutzende ausgerichtet. Dadurch ist es schwierig, schnell ein passendes Rezept zu finden, die Zutaten zu verstehen und das Gericht zu Hause zuverlässig nachzukochen. Zusätzlich fehlt häufig eine einfache Möglichkeit, Rezepte zu speichern oder neue Rezeptideen zu sammeln.
+
+**Ziele:**
+  - Eine einfache und verständliche Rezeptplattform für brasilianische Gerichte bereitstellen.
+  - Rezepte übersichtlich darstellen und durchsuchen können.
+  - Nutzenden ermöglichen, Rezepte als Favoriten zu speichern.
   - Rezeptvorschläge erfassen, damit die Plattform erweitert werden kann.
   - Die wichtigsten Workflows klar und ohne unnötige Komplexität umsetzen.
-- **Primäre Zielgruppe:** Personen, die sich für brasilianisches Essen interessieren und Rezepte zu Hause nachkochen möchten.
-- **Weitere Stakeholder:** Hobbyköche, spontante Kocherinnen und Kocher sowie Personen aus dem persönlichen Umfeld, die brasilianische Gerichte ausprobieren möchten.
+
+**Primäre Zielgruppe:** Personen, die sich für brasilianische Küche interessieren und Rezepte zu Hause nachkochen möchten.
+
+**Weitere Stakeholder:** Hobbyköche, spontane Kocherinnen und Kocher sowie Personen aus dem persönlichen Umfeld, die brasilianische Gerichte ausprobieren möchten.
 
 ## 2. Lösungsidee
 
-Die Website BR Rezepte ist eine Rezeptplattform für brasilianische Gerichte. Sie soll Nutzenden ermöglichen, Rezepte zu entdecken, zu filtern, zu speichern und eigene Rezeptideen vorzuschlagen.
+BR Rezepte ist eine Rezeptplattform für brasilianische Gerichte. Sie soll Nutzenden ermöglichen, Rezepte zu entdecken, zu filtern, zu speichern und eigene Rezeptideen vorzuschlagen.
 
-- **Kernfunktionalität:**  
+**Kernfunktionalität:**  
   - Startseite mit Überblick über die Plattform.
   - Rezeptübersicht mit Suche, Filter und Sortierung.
-  - Detailansicht eines Rezepts mit Zutaten, Zubereitung, Angaben und Favoritenfunktion.
+  - Rezeptdetailseite mit Zutaten, Zubereitung, Angaben und Favoritenfunktion.
   - Login- und Registrierungsbereich für Nutzende.
   - Formular für Rezeptvorschläge mit serverseitiger Validierung und Speicherung in MongoDB.
-  - Favoritenfunktion, damit eingeloggte Nutzer Rezepte markieren und wiederfinden können.
-- **Annahmen [Optional]:**
+  - Favoritenfunktion, damit eingeloggte Nutzende Rezepte markieren und wiederfinden können.
+
+**Annahmen:**
   - Nutzende möchten Rezepte schnell finden statt lange zu suchen.
   - Eine klare Struktur und einfache Filter reichen für den Mindestumfang aus.
-  - Eingeloggte Nutzerinnen und Nutzer profitieren von Favoriten und Rezeptvorschlägen.
-- **Abgrenzung [Optional]:**
+  - Eingeloggte Nutzende profitieren besonders von Favoriten und Rezeptvorschlägen.
+
+**Abgrenzung:**
   - Kein vollumfängliches Koch- oder Ernährungsportal.
-  - Keine komplexe Rollenverwaltung wie Admin- und Redaktionssystem.
+  - Keine komplexe Rollenverwaltung wie ein Admin- oder Redaktionssystem.
   - Kein Einkaufslisten- oder Warenkorb-System.
   - Keine externe API-Integration für Produktdaten.
 
@@ -60,9 +65,10 @@ Die Durchführung erfolgte phasenbasiert entlang der vorgegebenen Methodik. Die 
 
 ### 3.1 Understand & Define
 
-- **Zielgruppenverständnis:**  
-  Die Zielgruppe besteht aus Personen, die brasilianische Küche ausprobieren möchten, aber oft nur wenig Vorwissen haben. Deshalb muss die Website einfach verständlich sein und Inhalte klar erklären. Wichtige Nutzungssituationen sind: ein Rezept schnell finden, Zutaten verstehen, ein Rezept merken und eine neue Idee vorschlagen.
-- **Wesentliche Erkenntnisse:**  
+**Zielgruppenverständnis:**  
+  Die Zielgruppe besteht aus Personen, die brasilianische Küche ausprobieren möchten, aber oft nur wenig Vorwissen haben. Deshalb muss die Website einfach verständlich sein und Inhalte klar erklären. Wichtige Nutzungssituationen sind, dass Rezepte schnell gefunden werden können, Zutaten verständlich dargestellt werden und Rezepte gespeichert werden können. Zudem soll die Möglichkeit bestehen, neue Rezeptideen vorzuschlagen.
+
+**Wesentliche Erkenntnisse:**  
   - Die Navigation muss einfach und klar sein.
   - Rezepte sollen übersichtlich und gut lesbar dargestellt werden.
   - Nutzer brauchen sichtbares Feedback bei Aktionen wie Favoriten speichern oder Formular absenden.
@@ -71,13 +77,11 @@ Die Durchführung erfolgte phasenbasiert entlang der vorgegebenen Methodik. Die 
 
 ### 3.2 Sketch
 
-- **Variantenüberblick:**  
+ **Variantenüberblick:**  
   Es wurden unterschiedliche Layoutideen für die Plattform geprüft, insbesondere für die Startseite, die Rezeptübersicht und die Rezeptdetailseite. Im Fokus standen eine einfache, lesbare Darstellung und eine klare Trennung zwischen Übersicht, Detailansicht und Formularen.
-- **Skizzen:**  
-  - Variante mit sehr einfacher Startseite und direktem Einstieg in die Rezeptübersicht.
-  - Variante mit stärkerer visueller Startseite und hervorgehobenem Rezeptbereich.
-  - Variante mit Fokus auf Filter und Rezeptkarten für eine schnelle Orientierung.
-  - Variante mit einem Vorschlagsformular als eigenständigem Workflow.
+
+ **Skizze:** 
+Die Skizze bzw. das Mockup wurde mit Figma erstellt. Unter dem Link gelangt man zum Figma:https://www.figma.com/proto/VxaFwKLmULf5bE1EHsp0CW/Rezepte-Brazil?node-id=8762-5&p=f&t=V0Dt1GQB6898xfBu-0&scaling=contain&content-scaling=fixed&page-id=1%3A840.
 
 ### 3.3 Decide
 
@@ -96,11 +100,13 @@ Beschreibt die Gestaltung und Interaktion.
 
 > **Hinweis:** Hier wird der **Prototyp** beschrieben, nicht das **Mockup**.
 
-- **Informationsarchitektur:**  
+**Informationsarchitektur:**  
   Die Website ist in klar getrennte Bereiche gegliedert: Startseite, Rezeptübersicht, Rezeptdetailseite, Rezeptvorschlag, Login, Registrierung und Favoriten. Die Navigation bleibt konstant sichtbar, damit Nutzende sich jederzeit orientieren können.
-- **User Interface Design:**  
+
+**User Interface Design:**  
   Die Oberfläche verwendet Karten, Panels und klare Abschnittstrennung. Die Rezeptübersicht zeigt mehrere Rezepte in einer Grid-Struktur, die Detailseite arbeitet mit einer grossen Rezeptansicht und klar getrennten Inhaltsblöcken. Formulare sind bewusst einfach aufgebaut und geben direkt Feedback bei Fehlern oder Erfolg.
-- **Designentscheidungen:**  
+
+**Designentscheidungen:**  
   - Fokus auf gute Lesbarkeit statt auf überladene Gestaltung.
   - Klare Formulare mit sichtbaren Fehlermeldungen.
   - Favoritenfunktion als schneller Interaktionspunkt direkt auf der Rezeptseite.
@@ -131,6 +137,7 @@ Fasst die technische Realisierung zusammen.
 
 **URL der getesteten Version:**  
   Die getestete Version ist die auf Netlify deployte Live-Version. Die Version findet man unter folgender URL: https://6a0d6d371e8c370008c75c29--brasilianischerezepte.netlify.app/
+
 **Ziele der Prüfung:**  
 Ich habe mir folgende Fragestellungen gestellt, um herauszufinden, ob ich mit meinem Projekt zufrieden bin:
 
@@ -139,8 +146,9 @@ Ich habe mir folgende Fragestellungen gestellt, um herauszufinden, ob ich mit me
   - Kann man Rezeptvorschläge erstellen, aber nur mit einem Login?
   - Kann man die Mengenangaben innerhalb eines Rezeptes anpassen, sodass die Rezepte für eine bestimmte Anzahl Personen zubereitet werden können?
   - Ist die Bedienung verständlich und nachvollziehbar?
+
 **Vorgehen:**  
-  Zuerst habe ich die Deployment-Prüfung selbst durchgeführt, um zu überprüfen, ob alles funktioniert. Danach habe ich drei Testpersonen befragt, welche meine Website entweder mit dem PC oder dem Handy besucht haben. Ich befand mich währenddessen im selben Raum wie die Testpersonen und beobachtete sie, erklärte ihnen jedoch von Anfang an, dass sie sich so verhalten sollen, als wäre ich nicht anwesend.
+Zuerst habe ich die Deployment-Prüfung selbst durchgeführt, um zu überprüfen, ob alle Funktionen korrekt laufen. Anschliessend habe ich die Anwendung mit vier Testpersonen aus meinem Umfeld evaluiert. Jede Person besuchte die Website eigenständig auf dem persönlichem Laptop, während ich die Nutzung beobachtete. Die Testpersonen wurden gebeten, sich so zu verhalten, als wäre ich nicht anwesend.
 
   Ich habe den Testpersonen ein Testszenario sowie die dazugehörigen Testaufgaben gegeben. Diese wurden in einem Word-Dokument erfasst und den Testpersonen anschliessend übergeben. Während oder nach dem Test wurden unter anderem folgende Fragen gestellt:
 
@@ -150,8 +158,10 @@ Ich habe mir folgende Fragestellungen gestellt, um herauszufinden, ob ich mit me
   -	Hast du leicht herausgefunden, wie man einen Rezeptvorschlag erstellt? Hast du Verbesserungsvorschläge?
 
   Zusätzlich wurde die Anwendung am Schluss aus Sicht der Nutzer geprüft, um Fehler und Unklarheiten zu erkennen.
+
 **Stichprobe:**  
   Die erste Testperson war ich selbst im Rahmen der Entwicklung. Danach habe ich eine Gruppe von vier Personen aus der Klasse befragt, wobei jedes Mitglied der Gruppe meine Website alleine besucht hat. Somit konnte sichergestellt werden, dass die Testpersonen auf sich selbst angewiesen waren, wie es auch in einem realen Anwendungsfall wäre.
+
 **Aufgaben/Szenarien:**
   - *Testszenario:* Du bist ein leidenschaftlicher Hobbykoch und suchst nach Rezepten. Zufälligerweise bist du auf meine Website gestossen und hast Lust bekommen, brasilianische Rezepte selbst zu machen.
 
@@ -160,6 +170,7 @@ Ich habe mir folgende Fragestellungen gestellt, um herauszufinden, ob ich mit me
   - *Testaufgabe 2:* Am Wochenende nach dem Essen hat dir ein Freund gesagt, dass du einmal das Gericht «Bolinhas de Cacau» machen solltest. Du findest dieses Dessert jedoch nicht auf der Website, würdest es aber gerne dort sehen.
 
   Zudem soll zusätzlich auf Fehler- und Erfolgsmeldungen geachtet werden.
+
 **Kennzahlen & Beobachtungen:**  
   Alle Testpersonen hatten einen guten ersten Eindruck der Website. Ihnen gefiel insbesondere die Farbwahl mit den brasilianischen Farben. Ebenfalls positiv bewertet wurden die klare Struktur und der logische Aufbau der Seite. Die Slides mit den meistangeklickten Rezepten kamen ebenfalls gut an. Zudem fanden die Testpersonen es sinnvoll, dass man zuerst ein Login erstellen muss, um die speziellen Funktionen nutzen zu können.
 

@@ -40,8 +40,8 @@
       <div class="page-intro">
         <h2>Einfach stöbern</h2>
         <p>
-          Suche gezielt nach Rezeptnamen und navigiere schnell durch deine
-          Sammlung in einer modernen Kartenansicht.
+          Suche gezielt nach Rezeptnamen und navigiere schnell durch die
+          Sammlung.
         </p>
       </div>
     </article>
@@ -50,7 +50,7 @@
       <div class="page-intro">
         <h2>Favoriten speichern</h2>
         <p>
-          Markiere Rezepte, die du später wiederkochen willst, und baue dir dein
+          Favorisiere Rezepte, die du später wiederanschauen willst, und baue dir dein
           eigenes brasilianisches Kochbuch auf.
         </p>
       </div>
